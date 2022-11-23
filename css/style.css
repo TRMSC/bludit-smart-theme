@@ -160,3 +160,6 @@ section.home-page:nth-child(even) { /* Alternate the background color */
 .nondescript:focus-visible {
 	outline: none;
 }
+#search-clear {
+	filter: contrast(0.1);
+}
