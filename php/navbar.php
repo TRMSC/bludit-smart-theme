@@ -39,9 +39,9 @@
 
 				<!-- Custom search form if the plugin "search" is enabled -->
 				<?php if (pluginActivated('pluginSearch')): ?>
-				<div class="form-inline d-block">
+				<div class="form-inline">
 					<input id="search-input" class="form-control mr-sm-2" type="search" placeholder="<?php $language->p('Search') ?>" aria-label="Search">
-					<button class="btn btn-outline-primary my-2 my-sm-0" type="button" onClick="searchNow()"><i class="fa fa-search"></i></button>
+					<div onClick="searchNow()"><i class="fa fa-search"></i></div>
 					<script>
 						function searchNow() {
 							var searchURL = "<?php echo Theme::siteUrl(); ?>search/";
