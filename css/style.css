@@ -146,7 +146,7 @@ section.home-page:nth-child(even) { /* Alternate the background color */
     border-radius: 20px;
     padding: 0px 10px;
 }
-.undescript {
+.nondescript {
 	background-color: transparent;
     border: none;
 }
