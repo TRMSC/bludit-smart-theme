@@ -167,6 +167,8 @@ section.home-page:nth-child(even) { /* Alternate the background color */
 	.navbar-center {
 		align-items: center;
 	}
+}
+@media (max-width: 768px) {
 	.search-container {
 		margin: 10px 0px;
 	}
