@@ -13,7 +13,7 @@
 		<?php if (pluginActivated('pluginSearch')): ?>
 		<div class="form-inline d-block">
 			<input id="search-input" class="form-control mr-sm-2" type="search" placeholder="<?php $language->p('Search') ?>" aria-label="Search">
-			<button class="btn btn-outline-primary my-2 my-sm-0" type="button" onClick="searchNow()"><?php $language->p('Search') ?></button>
+			<button class="btn btn-outline-primary my-2 my-sm-0" type="button" onClick="searchNow()"><i class="fa fa-search"></i></button>
 			<script>
 				function searchNow() {
 					var searchURL = "<?php echo Theme::siteUrl(); ?>search/";
