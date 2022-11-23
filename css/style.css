@@ -163,3 +163,8 @@ section.home-page:nth-child(even) { /* Alternate the background color */
 #search-clear {
 	filter: contrast(0.1);
 }
+@media (min-width: 768px) {
+	.navbar-center {
+		align-items: center;
+	}
+}
