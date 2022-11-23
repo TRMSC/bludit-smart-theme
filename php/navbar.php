@@ -40,7 +40,7 @@
 				<!-- Custom search form if the plugin "search" is enabled -->
 				<?php if (pluginActivated('pluginSearch')): ?>
 				<div class="form-inline">
-					<input id="search-input" class="form-control mr-sm-2" type="search" placeholder="<?php $language->p('Search') ?>" aria-label="Search">
+					<input id="search-input" class="form-control" type="search" placeholder="<?php $language->p('Search') ?>" aria-label="Search">
 					<div onClick="searchNow()"><i class="fa fa-search"></i></div>
 					<script>
 						function searchNow() {
