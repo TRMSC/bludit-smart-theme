@@ -150,6 +150,9 @@ section.home-page:nth-child(even) { /* Alternate the background color */
 .search-container .fa-search {
 	color: rgba(255,255,255,.5);
 }
+#search-input.nondescript {
+	color: white;
+}
 .nondescript {
 	background-color: transparent;
     border: none;
