@@ -21,8 +21,7 @@
 	<?php echo Theme::css('css/style.css'); ?>
 
 	<!-- Include FontAwesome -->
-	<!-- <link rel="stylesheet" href="../bl-kernel/css/line-awesome/css/line-awesome-font-awesome.min.css"> -->
-	<?php echo Theme::css('css/line-awesome/css/line-awesome-font-awesome.min.css'); ?>
+	<link rel="stylesheet" href="../bl-kernel/css/line-awesome/css/line-awesome-font-awesome.min.css">
 
 	<!-- Load Bludit Plugins: Site head -->
 	<?php Theme::plugins('siteHead'); ?>
