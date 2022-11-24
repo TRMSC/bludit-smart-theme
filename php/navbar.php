@@ -4,6 +4,12 @@
    			<img class="navbar-logo" src="/bl-content/uploads/<?php echo $site->title(); ?>.png" alt="logo">
 		</a>
 
+		<?php
+		$logo = "/bl-content/uploads/" + $site->title() + ".png";
+		if (file_exists($logo)) {
+			echo 'logo exists';
+		}
+		?>
 		<!--
 		<a class="navbar-brand" href="<?php echo Theme::siteUrl(); ?>">
 			<span class="text-white"><?php echo $site->title(); ?></span>
