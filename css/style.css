@@ -89,8 +89,11 @@ img.nav-svg-icon {
 .nav-link {
 	font-size: 1em;
 }
+.navbar-logo-container {
+	max-width: 50%;
+}
 .navbar-logo {
-	height: 50px;
+	max-height: 50px;
 }
 
 /* Footer */

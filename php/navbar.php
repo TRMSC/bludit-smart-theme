@@ -1,13 +1,18 @@
 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark text-uppercase">
 	<div class="container">
-		<a href="<?php echo $site->url(); ?>">
+		<a class="navbar-logo-container" href="<?php echo $site->url(); ?>">
    			<img class="navbar-logo" src="/bl-content/uploads/<?php echo $site->title(); ?>.png" alt="logo">
 		</a>
+
+		<?php if (empty($content)): ?>
+		<?php if ($site->title()): ?>
 		<!--
 		<a class="navbar-brand" href="<?php echo Theme::siteUrl(); ?>">
 			<span class="text-white"><?php echo $site->title(); ?></span>
 		</a>
 		-->
+		<?php endif ?>
+
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 		</button>
