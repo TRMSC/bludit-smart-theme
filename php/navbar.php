@@ -5,7 +5,7 @@
 		</a>
 
 		<?php
-		$logo = "/bl-content/uploads/" + $site->title() + ".png";
+		$logo = "/bl-content/uploads/" + echo $site->title() + ".png";
 		echo $logo;
 		/*
 		if (file_exists($logo)) {
