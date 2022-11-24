@@ -33,10 +33,6 @@
 	</div>
 </header>
 
-<a href="<?php echo $site->url(); ?>">
-   <img src="/bl-content/uploads/<?php echo $site->title(); ?>.png" alt="logo">
-</a>
-
 <?php if (empty($content)): ?>
 	<div class="text-center p-4">
 	<?php $language->p('No pages found') ?>
