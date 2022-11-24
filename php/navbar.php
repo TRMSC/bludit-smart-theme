@@ -6,6 +6,7 @@
 
 		<?php
 		$logo = "/bl-content/uploads/" + $site->title() + ".png";
+		echo 'logo exists';
 		if (file_exists($logo)) {
 			echo 'logo exists';
 		}
