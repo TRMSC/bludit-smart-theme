@@ -6,11 +6,10 @@
 
 		<?php
 		$logo = "/bl-content/uploads/" + $site->title() + ".png";
-		echo 'logo exists';
-		/* if (file_exists($logo)) {
-			echo 'logo exists';
+		//echo 'logo exists';
+		if (file_exists($logo)) {
+			echo $logo;
 		}
-		*/
 		?>
 		<!--
 		<a class="navbar-brand" href="<?php echo Theme::siteUrl(); ?>">
