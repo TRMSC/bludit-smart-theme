@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark text-uppercase">
 	<div class="container">
 		<a href="<?php echo $site->url(); ?>">
-   			<img src="/bl-content/uploads/<?php echo $site->title(); ?>.png" alt="logo">
+   			<img class="navbar-logo" src="/bl-content/uploads/<?php echo $site->title(); ?>.png" alt="logo">
 		</a>
 		<!--
 		<a class="navbar-brand" href="<?php echo Theme::siteUrl(); ?>">

@@ -89,6 +89,9 @@ img.nav-svg-icon {
 .nav-link {
 	font-size: 0.8em;
 }
+.navbar-logo {
+	height: 50px;
+}
 
 /* Footer */
 footer {
