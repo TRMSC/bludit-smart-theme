@@ -3,7 +3,11 @@
 
 		<?php
 		$logo = "/bl-content/uploads/" . $site->title() . ".png";
-		echo $logo;
+		if (file_exists($logo)) {
+			echo "logo exists";
+		} else {
+			echo "logo doesn't exists";
+		}
 		?>
 
 		<a class="navbar-logo-container" href="<?php echo $site->url(); ?>">
