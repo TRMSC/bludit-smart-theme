@@ -1,10 +1,12 @@
 <?php
+/*
 		$logo = "/bl-content/uploads/" . $site->title() . ".png";
 		if (file_exists(trim($logo))) {
 			echo $logo;
 		} else {
 			echo $logo;
 		}
+*/
 ?>
 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark text-uppercase">
 	<div class="container">
