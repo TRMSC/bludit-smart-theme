@@ -1,9 +1,9 @@
 <?php
 		$logo = "/bl-content/uploads/" . $site->title() . ".png";
 		if (file_exists($logo)) {
-			echo "logo exists";
+			echo $logo;
 		} else {
-			echo "logo doesn't exists";
+			echo $logo;
 		}
 		?>
 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark text-uppercase">
