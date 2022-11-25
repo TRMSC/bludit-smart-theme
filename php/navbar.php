@@ -2,7 +2,7 @@
 	<div class="container">
 
 		<?php
-		$logo = "/bl-content/uploads/" . echo $site->title() . ".png";
+		$logo = "/bl-content/uploads/" . $site->title() . ".png";
 		echo $logo;
 		?>
 
