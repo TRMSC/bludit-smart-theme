@@ -1,5 +1,11 @@
 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark text-uppercase">
 	<div class="container">
+
+		<?php
+		$logo = "/bl-content/uploads/" . echo $site->title() . ".png";
+		echo $logo;
+		?>
+
 		<a class="navbar-logo-container" href="<?php echo $site->url(); ?>">
    			<img class="navbar-logo" src="/bl-content/uploads/<?php echo $site->title(); ?>.png" alt="logo">
 		</a>
