@@ -160,9 +160,14 @@ section.home-page:nth-child(even) { /* Alternate the background color */
 .search-container .fa-search {
 	color: rgba(255,255,255,.5);
 }
-.search-container .fa-search:hover {
-    color: white;
+.search-container .fa-search:hover,
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: #9a9da0;
     cursor: pointer;
+	filter: brightness(0.8);	
+}
+#search-input {
+	min-width: 90%;
 }
 #search-input.nondescript {
 	color: white;
