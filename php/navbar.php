@@ -1,14 +1,26 @@
 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark text-uppercase">
 	<div class="container">
+
+		<?php $logo = "bl-content/uploads/" . $site->title() . ".png"; ?>
+
+		<?php if (file_exists($logo)): ?>
+		<a class="navbar-logo-container" href="<?php echo $site->url(); ?>">
+			<img class="navbar-logo" src="/<?php echo $logo; ?>" alt="logo">
+		</a>
+
+		<?php else: ?>
 		<a class="navbar-brand" href="<?php echo Theme::siteUrl(); ?>">
 			<span class="text-white"><?php echo $site->title(); ?></span>
 		</a>
+		
+		<?php endif; ?>
+
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 		</button>
 		<div class="collapse navbar-collapse" id="navbarResponsive">
 
-			<ul class="navbar-nav ml-auto">
+			<ul class="navbar-nav ml-auto navbar-center">
 
 				<!-- Static pages -->
 				<?php foreach ($staticContent as $staticPage): ?>
@@ -39,9 +51,9 @@
 
 				<!-- Custom search form if the plugin "search" is enabled -->
 				<?php if (pluginActivated('pluginSearch')): ?>
-				<div class="form-inline d-block">
-					<input id="search-input" class="form-control mr-sm-2" type="search" placeholder="<?php $language->p('Search') ?>" aria-label="Search">
-					<button class="btn btn-outline-primary my-2 my-sm-0" type="button" onClick="searchNow()"><i class="fa fa-search"></i></button>
+				<div class="form-inline search-container">
+					<input id="search-input" class="nondescript" type="search" placeholder="<?php $language->p('Search') ?>" aria-label="Search">
+					<div onClick="searchNow()"><i class="fa fa-search"></i></div>
 					<script>
 						function searchNow() {
 							var searchURL = "<?php echo Theme::siteUrl(); ?>search/";
