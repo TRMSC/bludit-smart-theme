@@ -161,10 +161,18 @@ section.home-page:nth-child(even) { /* Alternate the background color */
 	color: rgba(255,255,255,.5);
 }
 .search-container .fa-search:hover,
-.navbar-dark .navbar-nav .nav-link:hover {
+.navbar .navbar-nav .nav-link:hover {
     color: #9a9da0;
     cursor: pointer;
 	filter: brightness(0.8);	
+}
+.navbar .navbar-logo {
+	transition: 0.15s;
+}
+.navbar .navbar-logo:hover {
+	filter: drop-shadow(12px 8px 2px #767676)!important;
+    opacity: 0.9;
+    transform: rotate3d(10, 10, 10, -3deg) translate(-5px, -2px);
 }
 #search-input {
 	min-width: 90%;
