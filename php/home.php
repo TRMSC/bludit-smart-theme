@@ -43,7 +43,15 @@
 <?php foreach ($content as $page): ?>
 <section class="home-page">
 	<div class="container">
+	<div>
 		<div class="row">
+			<div class="col-lg-8 mx-auto">
+				<?php if ($page->coverImage()): ?>
+					<div class="page-cover-image py-6 mb-4" style="background-image: url('<?php echo $page->coverImage(); ?>');">
+						<div style="height: 150px;"></div>
+					</div>
+				<?php endif ?>
+			</div>
 			<div class="col-lg-8 mx-auto">
 				<!-- Load Bludit Plugins: Page Begin -->
 				<?php Theme::plugins('pageBegin'); ?>
@@ -74,6 +82,7 @@
 				<?php Theme::plugins('pageEnd'); ?>
 			</div>
 		</div>
+	</div>
 	</div>
 </section>
 <?php endforeach ?>
