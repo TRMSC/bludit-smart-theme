@@ -23,7 +23,7 @@
 <section class="home-page">
 	<div class="container">
 	<div>
-		<div class="row">
+		<div class="row page-preview">
 			<div class="col-lg-8 mx-auto">
 				<?php if ($page->coverImage()): ?>
 					<div class="page-cover-image py-6 mb-4" style="background-image: url('<?php echo $page->coverImage(); ?>');">
