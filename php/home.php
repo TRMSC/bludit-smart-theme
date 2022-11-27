@@ -40,6 +40,35 @@
 					<h2 class="title"><?php echo $page->title(); ?></h2>
 				</a>
 
+				<!-- Page tags -->
+				<?php if (!empty($page->tags(true))): ?>
+                <p>
+                    <?php foreach ($page->tags(true) as $tagKey=>$tagName): ?>
+                    <a href="<?php echo DOMAIN_TAGS.$tagKey ?>"><span class="tag"><?php echo $tagName; ?></span></a>
+                    <?php endforeach ?>
+                </p>
+                <?php endif; ?>
+
+				<!-- Page information START-->
+				<p class="page-info">
+
+				<!-- Page category -->
+				<?php if ($page->category()): ?>
+                <span>
+					<i class="fa fa-folder"></i>
+                    <a href="<?php echo DOMAIN_CATEGORIES.$categoryKey.$page->categoryKey(); ?>"><span><?php echo $page->category(); ?></span></a>
+                </span>
+                <?php endif; ?>
+
+				<!-- Page created -->
+				<span>
+					<i class="fa fa-pencil"></i>
+                    <span><?php echo $page->date(); ?></span>
+                </span>
+
+				<!-- Page information END -->
+				</p>
+
 				<!-- Page description -->
 				<?php if ($page->description()): ?>
 				<p class="page-description"><?php echo $page->description(); ?></p>

@@ -72,6 +72,34 @@ blockquote {
         font-style: italic;
 }
 
+.tag {
+	padding: 1px 10px 3px 10px;
+    border: 1px solid #bea984;
+    border-radius: 15px;
+    background: linear-gradient(338deg, #362e28, #6e551c);
+    color: #ffd679;
+    font-size: small;
+    font-weight: 500;
+    text-decoration: none;
+    box-shadow: 0px 0px 15px 4px #e6ac0a00!important;
+    white-space: nowrap;
+}
+
+.page-info a,
+.page-info a:hover {
+	color: initial;
+}
+
+/* Icons */
+
+.fa-folder,
+.fa-folder-open {
+	transform: rotate(-90deg);
+}
+
+.page-info .fa {
+	font-weight: bold;
+}
 
 /* Paginator */
 .paginator {
