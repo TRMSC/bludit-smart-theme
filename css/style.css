@@ -72,6 +72,10 @@ blockquote {
         font-style: italic;
 }
 
+.tag-container {
+	margin-bottom: 8px;
+}
+
 .tag {
 	padding: 1px 10px 3px 10px;
     border: 1px solid #bea984;
@@ -89,7 +93,7 @@ blockquote {
 	display: flex;
     flex-wrap: wrap;
     column-gap: 15px;
-	margin-bottom: 17px;
+	margin: 0px 0px 17px 2px;
 	font-style: italic;
 }
 .page-info a,
