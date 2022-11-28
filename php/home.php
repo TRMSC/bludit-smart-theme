@@ -74,6 +74,22 @@
                 </span>
 				<?php endif; ?>
 
+				<!-- Page reading time -->
+				<span>
+					<i class="fa fa-book"></i>
+					<?php 
+					$plain = strip_tags($page->content());
+					$words = str_word_count($plain);
+					$wpm = 225;
+					if ($words <= $wpm) {
+						$time = '<1';
+					} else {
+						$time = round($words / $wpm);
+					}
+					echo $time . 'min';
+					?>
+				</span>
+
 				<!-- Page information END -->
 				</p>
 
