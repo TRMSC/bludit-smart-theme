@@ -90,6 +90,7 @@ blockquote {
     flex-wrap: wrap;
     column-gap: 15px;
 	margin-bottom: 17px;
+	font-style: italic;
 }
 .page-info a,
 .page-info a:hover {
