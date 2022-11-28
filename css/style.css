@@ -237,3 +237,8 @@ section.home-page:nth-child(even) { /* Alternate the background color */
 		margin: 10px 0px;
 	}
 }
+@media (max-width: 575px) {
+	.page-preview {
+		margin: 0px;
+	}
+}
