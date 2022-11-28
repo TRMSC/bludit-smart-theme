@@ -85,9 +85,19 @@ blockquote {
     white-space: nowrap;
 }
 
+.page-info {
+	display: flex;
+    flex-wrap: wrap;
+    column-gap: 15px;
+	margin-bottom: 17px;
+}
 .page-info a,
 .page-info a:hover {
 	color: initial;
+}
+
+.no-break {
+	white-space: nowrap;
 }
 
 /* Icons */

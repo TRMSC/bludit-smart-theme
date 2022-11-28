@@ -54,28 +54,28 @@
 
 				<!-- Page category -->
 				<?php if ($page->category()): ?>
-                <span>
+                <span class="no-break">
 					<i class="fa fa-folder"></i>
                     <a href="<?php echo DOMAIN_CATEGORIES.$categoryKey.$page->categoryKey(); ?>"><span><?php echo $page->category(); ?></span></a>
                 </span>
                 <?php endif; ?>
 
 				<!-- Page created -->
-				<span>
+				<span class="no-break">
 					<i class="fa fa-pencil"></i>
                     <span><?php echo $page->date(); ?></span>
                 </span>
 
 				<!-- Page modified -->
 				<?php if ($page->dateModified()): ?>
-				<span>
+				<span class="no-break">
 					<i class="fa fa-history"></i>
                     <span><?php echo $page->dateModified(); ?></span>
                 </span>
 				<?php endif; ?>
 
 				<!-- Page reading time -->
-				<span>
+				<span class="no-break">
 					<i class="fa fa-book"></i>
 					<?php 
 					$plain = strip_tags($page->content());
