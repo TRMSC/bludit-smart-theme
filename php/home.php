@@ -66,6 +66,14 @@
                     <span><?php echo $page->date(); ?></span>
                 </span>
 
+				<!-- Page modified -->
+				<?php if ($page->dateModified()): ?>
+				<span>
+					<i class="fa fa-history"></i>
+                    <span><?php echo $page->dateModified(); ?></span>
+                </span>
+				<?php endif; ?>
+
 				<!-- Page information END -->
 				</p>
 
