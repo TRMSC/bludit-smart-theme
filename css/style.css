@@ -5,7 +5,7 @@ html {
 
 body {
 	/* Padding top for navbar */
-	padding-top: 56px;
+	padding-top: 82px;
 	/* Margin bottom for footer height */
 	margin-bottom: 60px;
 }
@@ -161,12 +161,17 @@ footer {
 header.welcome {
 	padding: 100px 0;
 }
-
-/* Home - Page */
-section.home-page:nth-child(even) { /* Alternate the background color */
-	background: #FAFAFA;
+.welcome h1 {
+	letter-spacing: 2px;
+    opacity: 0.8;
+    margin-bottom: 30px;
+}
+.lead {
+	font-size: 1.3rem;
+    line-height: 1.8;
 }
 
+/* Home - Page */
 .page-cover-image {
 	background-size: cover;
 	background-position: center;

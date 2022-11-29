@@ -1,5 +1,5 @@
 <!-- Welcome message -->
-<header class="welcome bg-light">
+<header class="welcome">
 	<div class="container text-center">
 		<!-- Site title -->
 		<h1><?php echo $site->slogan(); ?></h1>
