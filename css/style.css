@@ -102,6 +102,14 @@ blockquote {
 	white-space: nowrap;
 }
 
+a {
+	color: #84a98c;
+}
+
+a:hover {
+	color: #52796f;
+}
+
 /* Icons */
 
 .fa-folder,
@@ -176,7 +184,7 @@ header.welcome {
 	border-radius: 5px;
 }
 
-.page-description {
+.page-description:not(.page-preview .page-description) {
 	color: #b5b5b5;
 	font-style: italic;
 }

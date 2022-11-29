@@ -98,17 +98,8 @@
 				<p class="page-description"><?php echo $page->description(); ?></p>
 				<?php endif ?>
 
-				<!-- Page content until the pagebreak -->
-				<div>
-				<?php echo $page->contentBreak(); ?>
-				</div>
-
-				<!-- Shows "read more" button if necessary -->
-				<?php if ($page->readMore()): ?>
-				<div class="text-right pt-3">
-				<a class="btn btn-primary btn-sm" href="<?php echo $page->permalink(); ?>" role="button"><?php echo $L->get('Read more'); ?></a>
-				</div>
-				<?php endif ?>
+				<!-- Page open -->
+				<a href="<?php echo $page->permalink(); ?>"><?php echo $L->get('Read more'); ?> <i class="fa fa-rocket"></i></a>
 
 				<!-- Load Bludit Plugins: Page End -->
 				<?php Theme::plugins('pageEnd'); ?>
