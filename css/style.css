@@ -173,6 +173,7 @@ header.welcome {
 .page-cover-image {
 	background-size: cover;
 	background-position: center;
+	border-radius: 5px;
 }
 
 .page-description {
