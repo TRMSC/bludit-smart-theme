@@ -95,7 +95,7 @@ blockquote {
 }
 .page-info a,
 .page-info a:hover {
-	color: initial;
+	color: inherit;
 }
 
 .no-break {
