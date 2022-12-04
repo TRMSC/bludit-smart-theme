@@ -110,6 +110,10 @@ a:hover {
 	color: #52796f;
 }
 
+.bold {
+	font-weight: bold;
+}
+
 /* Icons */
 
 .fa-folder,
