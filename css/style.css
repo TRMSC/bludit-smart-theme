@@ -2,36 +2,29 @@ html {
 	position: relative;
 	min-height: 100%;
 }
-
 body {
 	padding: 120px 0px;
 }
-
 section {
 	padding: 50px 0;
 }
-
 img {
 	max-width: 100%;
 }
-
 pre, code {
 	background: #f8f8f8;
 	color: #333;
 }
-
 pre {
 	border-left: 2px solid #ccc;
 	padding: 10px;
 }
-
 code {
 	display: inline-block;
 	padding: 0 0.5em;
 	line-height: 1.4em;
 	border-radius: 3px;
 }
-
 table {
 	empty-cells: show;
 	border: 1px solid #cbcbcb;
@@ -39,40 +32,33 @@ table {
 	font-size: 0.9em;
 	margin-bottom: 1rem;
 }
-
 thead {
 	background-color: #e0e0e0;
 	color: #000;
 	text-align: left;
 	vertical-align: bottom;
 }
-
 tr {
 	display: table-row;
 	vertical-align: inherit;
 	border-color: inherit;
 }
-
 th, td {
 	padding: 0.5em 1em;
 }
-
 h1.title,
 h2.title {
 	font-size: 2.3rem;
 }
-
 blockquote {
         padding: 10px 20px;
         margin: 0 0 20px 20px;
         border-left: 5px solid #eee;
         font-style: italic;
 }
-
 .tag-container {
 	margin-bottom: 8px;
 }
-
 .tag {
 	padding: 1px 10px 3px 10px;
     border: 1px solid #bea984;
@@ -85,7 +71,6 @@ blockquote {
     box-shadow: 0px 0px 15px 4px #e6ac0a00!important;
     white-space: nowrap;
 }
-
 .page-info {
 	display: flex;
     flex-wrap: wrap;
@@ -97,15 +82,12 @@ blockquote {
 .page-info a:hover {
 	color: inherit;
 }
-
 .no-break {
 	white-space: nowrap;
 }
-
 a {
 	color: #84a98c;
 }
-
 a:hover {
 	color: #52796f;
 }
@@ -115,12 +97,10 @@ a:hover {
 }
 
 /* Icons */
-
 .fa-folder,
 .fa-folder-open {
 	transform: rotate(-90deg);
 }
-
 .page-info .fa {
 	font-weight: bold;
 }
@@ -160,7 +140,6 @@ footer {
 	line-height: 60px;
 	font-size: 0.8em;
 }
-
 .mini-logo {
 	height: 22px;
 	padding-bottom: 5px;
@@ -187,12 +166,10 @@ header.welcome {
 	background-position: center;
 	border-radius: 5px;
 }
-
 .page-description:not(.page-preview .page-description) {
 	color: #b5b5b5;
 	font-style: italic;
 }
-
 .page-preview {
 	border-radius: 8px;
 	box-shadow: 0 0 16px 4px #c2c2c2, 6px 6px 12px 1px #737576;
