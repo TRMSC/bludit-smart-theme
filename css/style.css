@@ -91,9 +91,11 @@ a {
 a:hover {
 	color: #52796f;
 }
-
 .bold {
 	font-weight: bold;
+}
+.hold {
+	white-space: nowrap;
 }
 
 /* Icons */
