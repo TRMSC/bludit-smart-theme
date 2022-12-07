@@ -154,6 +154,14 @@ footer {
 .mini-logo {
 	height: 22px;
 }
+@media (max-width: 768px) {
+	.footer-row {
+		flex-direction: column;
+	}
+	.footer-col {
+		justify-content: center;
+	}
+}
 
 /* Home - Header */
 header.welcome {
