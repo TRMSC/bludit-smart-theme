@@ -132,6 +132,13 @@ img.nav-svg-icon {
 	max-height: 50px;
 	margin: 8px 0px;
 }
+.navbar-toggler .navbar-toggler-icon {
+    transition: 0.5s;
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+}
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+    transform: rotate(270deg);
+}
 
 /* Footer */
 footer {
