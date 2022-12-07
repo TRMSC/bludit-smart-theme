@@ -7,7 +7,7 @@
 			<div class="col footer-col footer-right">
 				<span class="text-white">Powered by bludit </span>
 				<img class="mini-logo" src="<?php echo DOMAIN_THEME_IMG.'favicon.png'; ?>"/>
-				<span class="text-warning">Smart theme by </span>
+				<span class="text-warning">Smart theme by</span>&nbsp;
 				<a target="_blank" class="text-warning" href="https://github.com/TRMSC">TRMSC</a>
 			</span>
 		</p>
