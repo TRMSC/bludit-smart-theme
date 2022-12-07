@@ -1,6 +1,6 @@
 <footer class="footer bg-dark">
 	<div class="container">
-		<div id="footer-src" class="row text-white text-uppercase">
+		<div id="footer-src" class="row footer-row text-white text-uppercase">
 			<div class="col footer-col footer-left">
 				<?php echo $site->footer(); ?>
 			</div>
