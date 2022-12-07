@@ -141,9 +141,18 @@ footer {
 	line-height: 60px;
 	font-size: 0.8em;
 }
+.footer-col {
+	display: flex;
+	align-items: center;
+}
+.footer-left {
+	justify-content: flex-start;
+}
+.footer-right {
+	justify-content: flex-end;
+}
 .mini-logo {
 	height: 22px;
-	padding-bottom: 5px;
 }
 
 /* Home - Header */
