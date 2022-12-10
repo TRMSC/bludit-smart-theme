@@ -159,6 +159,9 @@ footer {
 .footer-right {
 	justify-content: flex-end;
 }
+.footer-center {
+    justify-content: center;
+}
 .mini-logo {
 	height: 22px;
 }
