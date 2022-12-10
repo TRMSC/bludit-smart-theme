@@ -162,6 +162,9 @@ footer {
 .footer-center {
     justify-content: center;
 }
+#footer-links {
+	column-gap: 10px;
+}
 .mini-logo {
 	height: 22px;
 }
