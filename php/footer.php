@@ -12,5 +12,8 @@
 			</div>
 			<div id="footer-links"></div>
 		</div>
+		<div id="footer-second-row" class="row footer-row text-white">
+			<div id="footer-additional-text" class="col footer-col"></div>
+		</div>
 	</div>
 </footer>
