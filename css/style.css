@@ -94,9 +94,6 @@ a:hover {
 .bold {
 	font-weight: bold;
 }
-.hold {
-	white-space: nowrap;
-}
 
 /* Icons */
 .fa-folder,
