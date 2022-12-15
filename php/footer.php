@@ -5,10 +5,13 @@
 				<?php echo $site->footer(); ?>
 			</div>
 			<div id="footer-source" class="col footer-col footer-right">
-				<span class="text-white">Powered by Bludit </span>
+				<span class="text-white no-break">
+					<a target="_blank" class="text-white" href="https://www.bludit.com/">Powered by Bludit</a>
+				</span>
 				<img class="mini-logo" src="<?php echo DOMAIN_THEME_IMG.'favicon.png'; ?>"/>
-				<span class="text-warning">Smart theme by</span>&nbsp;
-				<a target="_blank" class="text-warning" href="https://github.com/TRMSC">TRMSC</a>
+				<span class="text-warning no-break">
+					<a target="_blank" class="text-warning" href="https://github.com/TRMSC">Smart theme by TRMSC</a>
+				</span>
 			</div>
 			<div id="footer-links"></div>
 		</div>
