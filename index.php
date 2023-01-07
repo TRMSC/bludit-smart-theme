@@ -35,16 +35,7 @@
 	<?php include(THEME_DIR_PHP.'navbar.php'); ?>
 
 	<!-- Content -->
-	<?php
-		// $WHERE_AM_I variable detect where the user is browsing
-		// If the user is watching a particular page the variable takes the value "page"
-		// If the user is watching the frontpage the variable takes the value "home"
-		if ($WHERE_AM_I == 'page') {
-			include(THEME_DIR_PHP.'page.php');
-		} else {
-			include(THEME_DIR_PHP.'home.php');
-		}
-	?>
+	<?php include($WHERE_AM_I == 'page' ? THEME_DIR_PHP.'page.php' : THEME_DIR_PHP.'home.php'); ?>
 
 	<!-- Footer -->
 	<?php include(THEME_DIR_PHP.'footer.php'); ?>
