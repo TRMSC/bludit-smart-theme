@@ -20,6 +20,9 @@
 	<!-- Include CSS Styles from this theme -->
 	<?php echo Theme::css('src/style.css'); ?>
 
+	<!-- Include Javascript from this theme -->
+	<?php echo Theme::js('src/main.js'); ?>
+
 	<!-- Include FontAwesome -->
 	<link rel="stylesheet" href="../bl-kernel/css/line-awesome/css/line-awesome-font-awesome.min.css">
 
