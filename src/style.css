@@ -242,9 +242,11 @@ header.welcome {
 	transition: 0.15s;
 }
 .navbar .navbar-logo:hover {
-	filter: drop-shadow(12px 8px 2px #767676)!important;
+    filter: drop-shadow(12px 8px 2px #767676);
+    -webkit-filter: drop-shadow(12px 8px 2px #767676);
     opacity: 0.9;
     transform: rotate3d(10, 10, 10, -3deg) translate(-5px, -2px);
+    -webkit-transform: rotate3d(10, 10, 10, -3deg) translate(-5px, -2px);
 }
 #search-input {
 	min-width: 90%;
