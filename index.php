@@ -29,7 +29,7 @@
 	<!-- Load Bludit Plugins: Site head -->
 	<?php Theme::plugins('siteHead'); ?>
 </head>
-<body>
+<body class="<?php Theme::plugins('bodyClass') ?>">
 
 	<!-- Load Bludit Plugins: Site Body Begin -->
 	<?php Theme::plugins('siteBodyBegin'); ?>
