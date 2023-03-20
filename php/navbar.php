@@ -14,6 +14,9 @@
 		</a>
 		
 		<?php endif; ?>
+	
+		<!-- Switch mode when navbar content is moved to menu-->
+		<?php Theme::plugins('changeModeMenu'); ?>
 
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
@@ -29,8 +32,8 @@
 				</li>
 				<?php endforeach ?>
 
-				<!-- Switch mode -->
-				<?php Theme::plugins('changeMode'); ?>	
+				<!-- Switch mode for full shown navbar-->
+				<?php Theme::plugins('changeModeNavbar'); ?>	
 
 				<!-- Social Networks -->
 				<?php foreach (Theme::socialNetworks() as $key=>$label): ?>
