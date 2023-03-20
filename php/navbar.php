@@ -29,6 +29,9 @@
 				</li>
 				<?php endforeach ?>
 
+				<!-- Switch mode -->
+				<?php Theme::plugins('changeMode') ?>	
+
 				<!-- Social Networks -->
 				<?php foreach (Theme::socialNetworks() as $key=>$label): ?>
 				<li class="nav-item">
