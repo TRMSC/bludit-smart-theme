@@ -282,3 +282,12 @@ header.welcome {
 		margin: 0px;
 	}
 }
+
+/* SMART PLUGIN  */
+.switch-container {
+    display: flex;
+    margin: 0px 10px 0px auto;
+}
+.switch-container i {
+    font-size: x-large;
+}
