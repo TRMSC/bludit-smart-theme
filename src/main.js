@@ -11,6 +11,7 @@ window.onload = () => {
 
     // Run internal functions
     setBodyPadding();
+    addAltText();
 
     //Call the Smart Plugin's runSmartPlugin function if it is installed
     if (typeof runSmartPlugin === 'function') {
@@ -47,3 +48,40 @@ setBodyPadding = async () => {
     });
 
 };
+
+
+
+/**
+ * Add a button to images within page for showing the alternative text.
+ * 
+ * @function
+ * @returns {void}
+ * 
+ */
+addAltText = () => {
+
+  const images = document.querySelectorAll(".page img");
+
+  images.forEach(image => {
+    const button = document.createElement("button");
+    button.style.opacity = "0.9";
+    button.style.position = "absolute";
+    button.style.left = image.offsetLeft + "px";
+    button.style.bottom = image.offsetLeft + "px";
+    button.style.margin = "10px";
+    button.textContent = "ALT";
+    button.classList.add('btn', 'btn-dark', 'btn-sm');
+
+    button.addEventListener("click", () => {
+      if (button.textContent === "ALT") {
+        const altText = image.alt || "No alt text available.";
+        button.textContent = altText;
+      } else {
+        button.textContent = "ALT";
+      }
+    });
+
+    image.parentNode.insertBefore(button, image.nextSibling);
+  });
+
+}
