@@ -4,6 +4,7 @@
  * @event
  * @listens onload
  * @class window 
+ * @returns {void}
  *
  */
 window.onload = () => {
