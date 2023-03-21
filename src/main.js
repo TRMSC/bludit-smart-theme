@@ -1,5 +1,5 @@
 /**
- * Prepare page
+ * Prepare page and call smart plugins script if it exists
  * 
  * @event
  * @listens onload
@@ -8,7 +8,13 @@
  */
 window.onload = () => {
 
+    // Run internal functions
     setBodyPadding();
+
+    //Call the Smart Plugin's runSmartPlugin function if it is installed
+    if (typeof runSmartPlugin === 'function') {
+        runSmartPlugin();
+    }
   
 };
 
