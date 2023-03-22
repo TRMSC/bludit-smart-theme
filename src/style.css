@@ -180,6 +180,11 @@ footer {
 }
 
 /* Home - Header */
+.landingpage-image {
+	width: -moz-available;
+    width: -webkit-fill-available;
+    width: fill-available;
+}
 header.welcome {
 	padding: 20px 0;
 }
