@@ -181,7 +181,7 @@ footer {
 
 /* Home - Header */
 header.welcome {
-	padding: 100px 0;
+	padding: 20px 0;
 }
 .welcome h1 {
 	filter: drop-shadow(14px 10px 1px lightgray);
