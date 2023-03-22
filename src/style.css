@@ -154,6 +154,8 @@ footer {
 .footer-col {
 	display: flex;
 	align-items: center;
+	font-family: monospace;
+    opacity: 0.6;
 }
 .footer-left {
 	justify-content: flex-start;
