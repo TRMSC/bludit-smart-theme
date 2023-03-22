@@ -60,14 +60,13 @@ setBodyPadding = async () => {
  */
 addAltText = () => {
 
-  const images = document.querySelectorAll(".page img");
+  const images = document.querySelectorAll(".page img, .welcome img");
 
   images.forEach(image => {
     const button = document.createElement("button");
     button.style.opacity = "0.9";
     button.style.position = "absolute";
     button.style.left = image.offsetLeft + "px";
-    button.style.bottom = image.offsetLeft + "px";
     button.style.margin = "10px";
     button.textContent = "ALT";
     button.classList.add('btn', 'btn-dark', 'btn-sm');
