@@ -1,7 +1,6 @@
 <!-- Area for landing -->
 <header class="welcome">
-	<div class="container text-center">
-
+	
 	<?php
     $pageNumber = 1;
     $numberOfItems = -1;
@@ -9,17 +8,19 @@
     $items = $pages->getList($pageNumber, $numberOfItems, $onlyPublished);
 
     $foundLandingPage = false;
-    foreach ($items as $key) {
-        $page = buildPage($key);
+    foreach ($staticContent as $page) {
         if ($page->title() == 'landingpage') {
+			echo '<div class="container">';
             echo $page->content();
             $foundLandingPage = true;
             break;
         }
     }
 
-    if (!$foundLandingPage) {
-        ?>
+    if (!$foundLandingPage) { ?>
+
+		<div class="container text-center">
+
         <!-- Site title -->
         <h1><?php echo $site->slogan(); ?></h1>
 
@@ -27,9 +28,8 @@
         <?php if ($site->description()): ?>
         <p class="lead"><?php echo $site->description(); ?></p>
         <?php endif ?>
-        <?php
-    }
-	?>
+		
+    <?php } ?>
 
 	</div>
 </header>
