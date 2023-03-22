@@ -12,7 +12,12 @@
 	<?php echo Theme::metaTagDescription(); ?>
 
 	<!-- Include Favicon -->
-	<?php echo Theme::favicon('img/favicon.png'); ?>
+	<?php 
+		$favicon = "bl-content/uploads/" . $site->title() . ".png";
+		if (file_exists($favicon)):
+			echo '<link rel="icon" href="/'.$favicon.'" type="image/png">';
+		endif; 
+	?>
 
 	<!-- Include CSS Bootstrap file from Bludit Core -->
 	<?php echo Theme::cssBootstrap(); ?>
