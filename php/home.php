@@ -1,5 +1,5 @@
 <!-- Area for landing -->
-<header class="welcome">
+
 	
 	<?php
     $pageNumber = 1;
@@ -10,7 +10,8 @@
     $foundLandingPage = false;
     foreach ($staticContent as $page) {
         if ($page->title() == 'landingpage') {
-			echo '<div class="container">';
+			echo '<img class="landingpage-image" src="'.$page->coverImage().'">';
+			echo '<header class="welcome"><div class="container">';
             echo $page->content();
             $foundLandingPage = true;
             break;
@@ -19,15 +20,16 @@
 
     if (!$foundLandingPage) { ?>
 
-		<div class="container text-center">
+		<header class="welcome">
+			<div class="container text-center">
 
-        <!-- Site title -->
-        <h1><?php echo $site->slogan(); ?></h1>
+			<!-- Site title -->
+			<h1><?php echo $site->slogan(); ?></h1>
 
-        <!-- Site description -->
-        <?php if ($site->description()): ?>
-        <p class="lead"><?php echo $site->description(); ?></p>
-        <?php endif ?>
+			<!-- Site description -->
+			<?php if ($site->description()): ?>
+			<p class="lead"><?php echo $site->description(); ?></p>
+			<?php endif ?>
 		
     <?php } ?>
 
