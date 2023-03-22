@@ -52,10 +52,10 @@ h2.title {
 	font-size: 2.3rem;
 }
 blockquote {
-        padding: 10px 20px;
-        margin: 0 0 20px 20px;
-        border-left: 5px solid #eee;
-        font-style: italic;
+    padding: 10px 20px;
+    margin: 0 0 20px 20px;
+    border-left: 5px solid #eee;
+    font-style: italic;
 }
 .tag-container {
 	margin-bottom: 8px;
@@ -94,6 +94,10 @@ a:hover {
 }
 .bold {
 	font-weight: bold;
+}
+.welcome img,
+section img {
+	border-radius: 5px;
 }
 
 /* Icons */
