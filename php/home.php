@@ -1,13 +1,35 @@
-<!-- Welcome message -->
+<!-- Area for landing -->
 <header class="welcome">
 	<div class="container text-center">
-		<!-- Site title -->
-		<h1><?php echo $site->slogan(); ?></h1>
 
-		<!-- Site description -->
-		<?php if ($site->description()): ?>
-		<p class="lead"><?php echo $site->description(); ?></p>
-		<?php endif ?>
+	<?php
+    $pageNumber = 1;
+    $numberOfItems = -1;
+    $onlyPublished = true;
+    $items = $pages->getList($pageNumber, $numberOfItems, $onlyPublished);
+
+    $foundLandingPage = false;
+    foreach ($items as $key) {
+        $page = buildPage($key);
+        if ($page->title() == 'landingpage') {
+            echo $page->content();
+            $foundLandingPage = true;
+            break;
+        }
+    }
+
+    if (!$foundLandingPage) {
+        ?>
+        <!-- Site title -->
+        <h1><?php echo $site->slogan(); ?></h1>
+
+        <!-- Site description -->
+        <?php if ($site->description()): ?>
+        <p class="lead"><?php echo $site->description(); ?></p>
+        <?php endif ?>
+        <?php
+    }
+	?>
 
 	</div>
 </header>
