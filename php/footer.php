@@ -8,7 +8,7 @@
 				<span class="text-white no-break">
 					<a target="_blank" class="text-white" href="https://www.bludit.com/">Powered by Bludit</a>
 				</span>
-				<img class="mini-logo" src="<?php echo DOMAIN_THEME_IMG.'favicon.png'; ?>"/>
+				<img class="mini-logo" src="<?php echo DOMAIN_THEME_IMG.'bludit.png'; ?>"/>
 				<span class="text-warning no-break">
 					<a target="_blank" class="text-warning" href="https://github.com/TRMSC">Smart theme by TRMSC</a>
 				</span>
