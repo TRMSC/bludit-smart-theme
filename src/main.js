@@ -1,4 +1,18 @@
 /**
+ * Define const variables
+ * 
+ * @param {array} shareData Site information for share method
+ *
+ */
+const shareData = {
+  title: document.title,
+  text: document.title,
+  url: window.location
+};
+
+
+
+/**
  * Prepare page and call smart plugins script if it exists
  * 
  * @event
@@ -13,9 +27,20 @@ window.onload = () => {
     setBodyPadding();
     addAltText();
 
-    //Call the Smart Plugin's runSmartPlugin function if it is installed
+    // Call the Smart Plugin's runSmartPlugin function if it is installed
     if (typeof runSmartPlugin === 'function') {
         runSmartPlugin();
+    }
+
+    // Build function for adding event listeners
+    const addClickEvent = function(element, handler) {
+        element.addEventListener('click', handler);
+    };
+
+    // Add event listener for sharing buttons
+    const shareElements = document.getElementsByClassName('share');
+    for (let i = 0; i < shareElements.length; i++) {
+      addClickEvent(shareElements[i], sharePage);
     }
   
 };
@@ -52,6 +77,37 @@ setBodyPadding = async () => {
 
 
 /**
+ * Share page by using the share api
+ * 
+ * @async
+ * @function sharePage
+ * @throws {error} When the share api isn't available or the share fails
+ * 
+ */
+sharePage = async () => {
+
+  if (navigator.share) {
+    try {
+      await navigator.share(shareData);
+      console.log('Shared successfully');
+    } catch (err) {
+      console.log(`Error: ${err}`);
+    }
+  } else {
+      const tempElement = document.createElement("input");
+      tempElement.value = shareData.url;
+      document.body.appendChild(tempElement);
+      tempElement.select();
+      document.execCommand("copy");
+      document.body.removeChild(tempElement);
+      alert('📋✔');    
+  }
+  
+};
+
+
+
+/**
  * Add a button to images within page for showing the alternative text.
  * 
  * @function
@@ -83,4 +139,4 @@ addAltText = () => {
     image.parentNode.insertBefore(button, image.nextSibling);
   });
 
-}
+};
