@@ -11,11 +11,12 @@
 	<!-- Dynamic description tag -->
 	<?php echo Theme::metaTagDescription(); ?>
 
-	<!-- Include Favicon -->
+	<!-- Include Images -->
 	<?php 
 		$favicon = "bl-content/uploads/" . $site->title() . ".png";
 		if (file_exists($favicon)):
 			echo '<link rel="icon" href="/'.$favicon.'" type="image/png">';
+			echo '<meta property="og:image" content="/'.$favicon.'">';
 		endif; 
 	?>
 
