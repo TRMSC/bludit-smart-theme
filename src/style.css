@@ -142,6 +142,9 @@ img.nav-svg-icon {
 .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     transform: rotate(270deg);
 }
+.share-navbar i {
+	font-size: x-large;
+}
 
 /* Footer */
 footer {
