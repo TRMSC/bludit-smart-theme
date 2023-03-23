@@ -55,6 +55,14 @@
 				</li>
 				<?php endif; ?>
 
+				<!-- Share --> 
+				<li class="nav-item d-none d-md-block share share-navbar">
+					<a class="nav-link">
+						<i class="fa fa-share-alt"></i>
+						<span class="d-inline d-sm-none">SHARE</span>
+					</a>
+				</li>
+
 				<!-- Custom search form if the plugin "search" is enabled -->
 				<?php if (pluginActivated('pluginSearch')): ?>
 				<div class="form-inline search-container">
