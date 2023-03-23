@@ -38,7 +38,7 @@
 				<!-- Social Networks -->
 				<?php foreach (Theme::socialNetworks() as $key=>$label): ?>
 				<li class="nav-item">
-					<a class="nav-link" href="<?php echo $site->{$key}(); ?>" target="_blank">
+					<a class="nav-link" href="<?php echo $site->{$key}(); ?>" target="_blank" title="<?php echo $label; ?>">
 						<img class="d-none d-sm-block nav-svg-icon" src="<?php echo DOMAIN_THEME.'img/'.$key.'.svg' ?>" alt="<?php echo $label ?>" />
 						<span class="d-inline d-sm-none"><?php echo $label; ?></span>
 					</a>
@@ -48,7 +48,7 @@
 				<!-- RSS -->
 				<?php if (Theme::rssUrl()): ?>
 				<li class="nav-item">
-					<a class="nav-link" href="<?php echo Theme::rssUrl() ?>" target="_blank">
+					<a class="nav-link" href="<?php echo Theme::rssUrl() ?>" target="_blank" title="RSS">
 						<img class="d-none d-sm-block nav-svg-icon text-primary" src="<?php echo DOMAIN_THEME.'img/rss.svg' ?>" alt="RSS" />
 						<span class="d-inline d-sm-none">RSS</span>
 					</a>
