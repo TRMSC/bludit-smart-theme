@@ -57,7 +57,7 @@
 
 				<!-- Share --> 
 				<li class="nav-item share share-navbar">
-					<a class="nav-link">
+					<a class="nav-link" title="Share">
 						<i class="fa fa-share-alt d-none d-sm-block "></i>
 						<span class="d-inline d-sm-none">SHARE</span>
 					</a>
