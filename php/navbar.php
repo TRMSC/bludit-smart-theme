@@ -56,9 +56,9 @@
 				<?php endif; ?>
 
 				<!-- Share --> 
-				<li class="nav-item d-none d-md-block share share-navbar">
+				<li class="nav-item share share-navbar">
 					<a class="nav-link">
-						<i class="fa fa-share-alt"></i>
+						<i class="fa fa-share-alt d-none d-sm-block "></i>
 						<span class="d-inline d-sm-none">SHARE</span>
 					</a>
 				</li>
