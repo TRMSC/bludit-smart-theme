@@ -25,12 +25,17 @@
 
 			<ul class="navbar-nav ml-auto navbar-center">
 
-				<!-- Static pages -->
-				<?php foreach ($staticContent as $staticPage): ?>
-				<li class="nav-item">
-					<a class="nav-link" href="<?php echo $staticPage->permalink(); ?>"><?php echo $staticPage->title(); ?></a>
-				</li>
-				<?php endforeach ?>
+				<!-- Static pages with smart plugin -->
+				<?php Theme::plugins('controlNavItems'); ?>
+
+				<!-- Alternative static -->
+				<?php if (!class_exists('pluginSmart')) : ?> 
+					<?php foreach ($staticContent as $staticPage): ?>
+					<li class="nav-item">
+						<a class="nav-link" href="<?php echo $staticPage->permalink(); ?>"><?php echo $staticPage->title(); ?></a>
+					</li>
+					<?php endforeach ?>
+				<?php endif; ?>
 
 				<!-- Switch mode for full shown navbar-->
 				<?php Theme::plugins('changeModeNavbar'); ?>	
