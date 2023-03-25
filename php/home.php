@@ -1,48 +1,23 @@
 <!-- Area for landing -->
+<?php Theme::plugins('addLandingpage'); ?>
 
-	
-	<?php
-    $pageNumber = 1;
-    $numberOfItems = -1;
-    $onlyPublished = true;
-    $items = $pages->getList($pageNumber, $numberOfItems, $onlyPublished);
+<!-- Alternative header -->
+<?php if (!class_exists('pluginSmart')) : ?> 
+    <header class="welcome">
+        <div class="container text-center">
+            <?php echo ($site->slogan()) ? '<h1>' . $site->slogan() . '</h1>' : ''; ?>
+            <?php echo $site->description() ? '<p class="lead">' . $site->description() . '</p>' : ''; ?>
+        </div>
+    </header>
+<?php endif; ?>
 
-    $foundLandingPage = false;
-    foreach ($staticContent as $page) {
-        if ($page->title() == 'landingpage') {
-			echo '<img class="landingpage-image" src="'.$page->coverImage().'">';
-			echo '<header class="welcome"><div class="container">';
-            echo $page->content();
-            $foundLandingPage = true;
-            break;
-        }
-    }
-
-    if (!$foundLandingPage) { ?>
-
-		<header class="welcome">
-			<div class="container text-center">
-
-			<!-- Site title -->
-			<h1><?php echo $site->slogan(); ?></h1>
-
-			<!-- Site description -->
-			<?php if ($site->description()): ?>
-			<p class="lead"><?php echo $site->description(); ?></p>
-			<?php endif ?>
-		
-    <?php } ?>
-
-	</div>
-</header>
-
+<!-- Content -->
 <?php if (empty($content)): ?>
 	<div class="text-center p-4">
 	<?php $language->p('No pages found') ?>
 	</div>
 <?php endif ?>
 
-<!-- Print all the content -->
 <?php foreach ($content as $page): ?>
 <section class="home-page">
 	<div class="container">
