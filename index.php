@@ -5,13 +5,32 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta name="generator" content="Bludit">
 
-	<!-- Dynamic title tag -->
-	<?php echo Theme::metaTagTitle(); ?>
+	<!-- Open graph meta tags -->
+	<meta property="og:site_name" content="<?php echo $site->title(); ?>">
+	<meta property="og:description" content="<?php echo $page->description(); ?>">
+	<meta property="og:url" content="<?php echo $site->url(); ?>">
 
-	<!-- Dynamic description tag -->
+	<?php 
+		if ($WHERE_AM_I=='home') {
+			echo '<meta property="og:title" content="' . $site->slogan() . '">' . "\n";
+			if (class_exists('pluginSmart')) {
+				// Add og-image for smart theme
+			} 
+		} elseif ($WHERE_AM_I=='page') {
+			echo '<meta property="og:title" content="' . $page->title() . '">' . "\n";
+			echo '<meta property="og:image" content="' . $page->coverImage() . '">' . "\n";
+		}
+		// Add og-image for the following cases:
+		// - Img doesn't exist on home with smart theme
+		// - Home without smart theme
+		// - Page without cover image
+	?>
+
+	<!-- Dynamic tags -->
+	<?php echo Theme::metaTagTitle(); ?>
 	<?php echo Theme::metaTagDescription(); ?>
 
-	<!-- Include Images -->
+	<!-- Include Favicon -->
 	<?php 
 		$favicon = "bl-content/uploads/" . $site->title() . ".png";
 		if (file_exists($favicon)):
