@@ -7,17 +7,18 @@
 
 	<!-- Open graph meta tags -->
 	<meta property="og:site_name" content="<?php echo $site->title(); ?>">
-	<meta property="og:description" content="<?php echo $page->description(); ?>">
 	<meta property="og:url" content="<?php echo $site->url(); ?>">
 
 	<?php 
 		if ($WHERE_AM_I=='home') {
 			echo '<meta property="og:title" content="' . $site->slogan() . '">' . "\n";
+			echo '<meta property="og:description" content="' . $site->description() . '">' . "\n";
 			if (class_exists('pluginSmart')) {
 				// Add og-image for smart theme
 			} 
 		} elseif ($WHERE_AM_I=='page') {
 			echo '<meta property="og:title" content="' . $page->title() . '">' . "\n";
+			echo '<meta property="og:description" content="' . $page->description() . '">' . "\n";
 			echo '<meta property="og:image" content="' . $page->coverImage() . '">' . "\n";
 		}
 		// Add og-image for the following cases:
