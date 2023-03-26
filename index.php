@@ -8,6 +8,7 @@
 	<!-- Open graph meta tags -->
 	<meta property="og:site_name" content="<?php echo $site->title(); ?>">
 	<meta property="og:url" content="<?php echo $site->url(); ?>">
+	<meta property="og:locale" content="<?php echo $site->language(); ?>">
 
 	<?php 
 		if ($WHERE_AM_I=='home') {
