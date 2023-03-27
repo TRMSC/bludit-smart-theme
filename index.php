@@ -15,8 +15,8 @@
 			echo '<meta property="og:title" content="' . $site->slogan() . '">' . "\n";
 			echo '<meta property="og:description" content="' . $site->description() . '">' . "\n";
 			if (class_exists('pluginSmart')) {
-				// Add og-image for smart theme
-			} 
+				Theme::plugins('addMeta');
+			}
 		} elseif ($WHERE_AM_I=='page') {
 			echo '<meta property="og:title" content="' . $page->title() . '">' . "\n";
 			echo '<meta property="og:description" content="' . $page->description() . '">' . "\n";
