@@ -15,14 +15,13 @@
 			echo '<meta property="og:title" content="' . $site->slogan() . '">' . "\n";
 			echo '<meta property="og:description" content="' . $site->description() . '">' . "\n";
 			if (class_exists('pluginSmart')) {
-				/*
-				$landingpage = Theme::plugins('addMeta');
+				$pluginSmart = new pluginSmart();
+				$landingpage = $pluginSmart->getValue('landingpage');
 				foreach ($staticContent as $page) {
 					if ($page->permalink() == $landingpage ) {
 							echo '<meta property="og:image" content="' . $page->coverImage() . '">' . "\n";
 					}
 				}
-				*/
 			}
 		} elseif ($WHERE_AM_I=='page') {
 			echo '<meta property="og:title" content="' . $page->title() . '">' . "\n";
