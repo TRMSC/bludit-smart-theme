@@ -311,9 +311,9 @@ header.welcome {
 .scroll-trigger {
     opacity: 0;
     transition: all 0.7s ease-in 0s;
-    transform: translateX(-50px);
+    /*transform: translateX(-50px);*/
 }
 .animate {
-  opacity: 1;
-  transform: translateX(0);
+	opacity: 1;
+	/*transform: translateX(0);*/
 }
