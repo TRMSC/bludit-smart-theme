@@ -11,7 +11,7 @@
 						$pluginSmart = new pluginSmart();
 						$footerlinks = $pluginSmart->getValue('footerLinks');
 					}
-					echo '<div id="footer-source" class="col footer-col ' . (empty($footerlinks) ? 'footer-right' : 'footer-center') . '"';
+					echo '<div id="footer-source" class="col footer-col ' . (empty($footerlinks) ? 'footer-right' : 'footer-center') . '">';
 				?>
 				<span class="text-white no-break">
 					<a target="_blank" class="text-white" href="https://www.bludit.com/">Powered by Bludit</a>
