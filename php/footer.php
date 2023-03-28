@@ -4,7 +4,15 @@
 			<div id="footer-text" class="col footer-col footer-left">
 				<?php echo $site->footer(); ?>
 			</div>
-			<div id="footer-source" class="col footer-col footer-right">
+			<!-- <div id="footer-source" class="col footer-col footer-right"> -->
+				<?php 
+					$footerlinks = '';
+					if (class_exists('pluginSmart')) {
+						$pluginSmart = new pluginSmart();
+						$footerlinks = $pluginSmart->getValue('footerLinks');
+					}
+					echo '<div id="footer-source" class="col footer-col ' . (empty($footerlinks) ? 'footer-right' : 'footer-center') . '"';
+				?>
 				<span class="text-white no-break">
 					<a target="_blank" class="text-white" href="https://www.bludit.com/">Powered by Bludit</a>
 				</span>
@@ -13,9 +21,9 @@
 					<a target="_blank" class="text-warning" href="https://github.com/TRMSC/bludit-smart-theme">Smart theme by TRMSC</a>
 				</span>
 			</div>
-			<div id="footer-links">
+			<!-- <div id="footer-links"> -->
 				<?php Theme::plugins('addFooterLinks'); ?>
-			</div>
+			<!-- </div> -->
 		</div>
 		<div id="footer-second-row" class="row footer-row text-white">
 			<div id="footer-additional-text" class="col footer-col"></div>
