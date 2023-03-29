@@ -19,14 +19,16 @@
 				$landingpage = $pluginSmart->getValue('landingpage');
 				foreach ($staticContent as $page) {
 					if ($page->permalink() == $landingpage ) {
-							echo '<meta property="og:image" content="' . $page->coverImage() . '">' . "\n";
+							//echo '<meta property="og:image" content="' . $page->coverImage() . '">' . "\n";
+							echo '<meta property="og:image" content="' . (($page->custom('altOG')) ? $page->custom('altOG') : $page->coverImage()) . '">' . "\n";
 					}
 				}
 			}
 		} elseif ($WHERE_AM_I=='page') {
 			echo '<meta property="og:title" content="' . $page->title() . '">' . "\n";
 			echo '<meta property="og:description" content="' . $page->description() . '">' . "\n";
-			echo '<meta property="og:image" content="' . $page->coverImage() . '">' . "\n";
+			//echo '<meta property="og:image" content="' . $page->coverImage() . '">' . "\n";
+			echo '<meta property="og:image" content="' . (($page->custom('altOG')) ? $page->custom('altOG') : $page->coverImage()) . '">' . "\n";
 		}
 		// Add og-image for the following cases:
 		// - Img doesn't exist on home with smart theme
