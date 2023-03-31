@@ -23,7 +23,9 @@
 				<?php Theme::plugins('addFooterLinks'); ?>
 		</div>
 		<div id="footer-second-row" class="row footer-row text-white">
-			<div id="footer-additional-text" class="col footer-col"></div>
+			<div id="footer-additional-text" class="col footer-col">
+				<?= class_exists('pluginSmart') ? html_entity_decode($pluginSmart->getValue('footerText')) : '' ?>
+			</div>
 		</div>
 	</div>
 </footer>
