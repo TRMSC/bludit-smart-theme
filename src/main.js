@@ -162,7 +162,7 @@ sharePage = async () => {
  */
 addAltText = () => {
 
-  const images = document.querySelectorAll(".page img, .welcome img");
+  const images = document.querySelectorAll(".page img, .welcome img, .page-preview img");
 
   images.forEach(image => {
     const button = document.createElement("button");
