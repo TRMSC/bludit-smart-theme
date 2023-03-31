@@ -9,7 +9,7 @@
 				<!-- Page cover image -->
 				<?php if ($page->coverImage()): ?>
 					<div class="py-6 mb-4">
-						<img src="<?php echo $page->coverImage(); ?>">
+						<img src="<?php echo $page->coverImage(); ?>" alt="<?php echo $page->custom('coverImageAlt'); ?>">
 					</div>
 				<?php endif ?>
 
