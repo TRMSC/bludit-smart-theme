@@ -165,6 +165,9 @@ addAltText = () => {
   const images = document.querySelectorAll(".page img, .welcome img, .page-preview img");
 
   images.forEach(image => {
+    const altText = image.alt;
+    if (!altText) return;
+
     const button = document.createElement("button");
     button.style.opacity = "0.9";
     button.style.position = "absolute";
