@@ -24,10 +24,11 @@
 	<div>
 		<div class="row page-preview">
 			<div class="col-lg-8 mx-auto">
+				<!-- Page cover image -->
 				<?php if ($page->coverImage()): ?>
-					<div class="page-cover-image py-6 mb-4" style="background-image: url('<?php echo $page->coverImage(); ?>');">
-						<div style="height: 150px;"></div>
-					</div>
+				<div class="page-cover-image py-6 mb-4">
+					<img src="<?php echo $page->coverImage(); ?>" style="height: 150px; width: 100%; object-fit: cover;">
+				</div>
 				<?php endif ?>
 			</div>
 			<div class="col-lg-8 mx-auto">
