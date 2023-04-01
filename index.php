@@ -11,11 +11,13 @@
 	<meta property="og:locale" content="<?php echo $site->language(); ?>">
 
 	<?php 
+		if (class_exists('pluginSmart')) {
+			$pluginSmart = new pluginSmart();
+		}
 		if ($WHERE_AM_I=='home') {
 			echo '<meta property="og:title" content="' . $site->slogan() . '">' . "\n";
 			echo '<meta property="og:description" content="' . $site->description() . '">' . "\n";
 			if (class_exists('pluginSmart')) {
-				$pluginSmart = new pluginSmart();
 				$landingpage = $pluginSmart->getValue('landingpage');
 				foreach ($staticContent as $page) {
 					if ($page->permalink() == $landingpage ) {
@@ -42,10 +44,14 @@
 
 	<!-- Include Favicon -->
 	<?php 
-		$favicon = "bl-content/uploads/" . $site->title() . ".png";
-		if (file_exists($favicon)):
-			echo '<link rel="icon" href="/'.$favicon.'" type="image/png">';
-		endif; 
+		if (class_exists('pluginSmart') && $pluginSmart->getValue('favicon')) {
+				echo '<link rel="icon" href="'.$pluginSmart->getValue('favicon').'" type="image/png">';
+		} else {
+			$favicon = "bl-content/uploads/" . $site->title() . ".png";
+			if (file_exists($favicon)) {
+				echo '<link rel="icon" href="/'.$favicon.'" type="image/png">';
+			}
+		}
 	?>
 
 	<!-- Include CSS Bootstrap file from Bludit Core -->
