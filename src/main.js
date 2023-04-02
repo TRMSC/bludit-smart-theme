@@ -203,6 +203,10 @@ createToc = () => {
   tocToggle.addEventListener('click', function() {
     toc.classList.toggle('open');
     toc.classList.toggle('close');
+    window.scrollTo({
+      top: toc.offsetTop,
+      behavior: 'smooth'
+    });
   });
 
   let headings = document.querySelectorAll('.page-content h1, .page-content h2, .page-content h3, .page-content h4, .page-content h5, .page-content h6');
