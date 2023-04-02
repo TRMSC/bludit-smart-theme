@@ -297,6 +297,20 @@ header.welcome {
 	}
 }
 
+/* TABLE OF CONTENT */
+#toc.close {
+    height: 0px;
+    visibility: hidden;
+}
+#toc.open {
+    height: auto;
+    visibility: visible;
+}
+#toc ul {
+    list-style-type: none;
+    padding: 12px 0px 2px 0px;
+}
+
 /* SMART PLUGIN  */
 .switch-menu {
     display: flex;
