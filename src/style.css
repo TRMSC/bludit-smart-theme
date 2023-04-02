@@ -313,6 +313,9 @@ header.welcome {
     list-style-type: none;
     padding: 0px 0px 5px 0px;
 }
+#toc a {
+    cursor: pointer;
+}
 
 /* SMART PLUGIN  */
 .switch-menu {
