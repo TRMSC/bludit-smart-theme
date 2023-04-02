@@ -157,7 +157,7 @@ sharePage = async () => {
 /**
  * Add a button to images within page for showing the alternative text.
  * 
- * @function
+ * @function addAltText
  * @returns {void}
  * 
  */
@@ -193,7 +193,13 @@ addAltText = () => {
 };
 
 
-
+/**
+ * Create table of contents and handle button for interacting
+ * 
+ * @function createToc
+ * @returns {void}
+ * 
+ */
 createToc = () => {
 
   let toc = document.querySelector('#toc');
