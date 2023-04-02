@@ -220,7 +220,7 @@ createToc = () => {
     tocLink.textContent = heading.textContent;
     tocLink.addEventListener('click', function(e) {
       e.preventDefault();
-      let scrollPosition = heading.offsetTop - paddingTop;
+      let scrollPosition = heading.offsetTop;
       window.scrollTo({
         top: scrollPosition,
         behavior: 'smooth'
