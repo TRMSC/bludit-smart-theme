@@ -14,9 +14,7 @@
 				<?php endif ?>
 
 				<!-- Page title -->
-				<a class="text-dark" href="<?php echo $page->permalink(); ?>">
-					<h2 class="title"><?php echo $page->title(); ?></h2>
-				</a>
+				<h1 id="page-title" class="title"><?php echo $page->title(); ?></h1>
 
 				<!-- Page tags -->
 				<?php if (!empty($page->tags(true))): ?>
