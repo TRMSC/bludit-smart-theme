@@ -3,5 +3,7 @@
 	{
 		"name": "Alternative",
 		"description": "Simple and elegant theme for websites or blogs. Navbar with social media and static pages."
-	}
+	},
+	"content": "Content",
+	"share": "Share"
 }
