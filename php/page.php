@@ -81,8 +81,8 @@
 				<hr class="bg-secondary">
 				<p></p>
 				<div class="btn-group" role="group" aria-label="Page Buttons" style="width: 100%;gap: 2px;">
-					<button id="toc-toggle" class="btn btn-secondary btn-sm">Inhalt <i class="fa fa-compass"></i></button>
-					<button type="button" class="btn btn-secondary btn-sm" style="">Teilen <i class="fa fa-share-alt"></i></button>
+					<button id="toc-toggle" class="btn btn-secondary btn-sm"><?php $language->p('content') ?> <i class="fa fa-compass"></i></button>
+					<button type="button" class="btn btn-secondary btn-sm share" style=""><?php $language->p('share') ?> <i class="fa fa-share-alt"></i></button>
 				</div>
 				<div id="toc" class="close">
 					<ul></ul>
