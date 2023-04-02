@@ -27,6 +27,7 @@ window.onload = () => {
     setBodyPadding();
     addAltText();
     generateShareImage();
+    createToc();
 
     // Call the Smart Plugin's runSmartPlugin function if it is installed
     if (typeof runSmartPlugin === 'function') {
@@ -190,3 +191,44 @@ addAltText = () => {
   });
 
 };
+
+
+
+createToc = () => {
+
+  let toc = document.querySelector('#toc');
+  if (!toc) return;
+
+  let tocToggle = document.querySelector('#toc-toggle');
+  tocToggle.addEventListener('click', function() {
+    toc.classList.toggle('open');
+    toc.classList.toggle('close');
+  });
+
+  let headings = document.querySelectorAll('.page-content h1, .page-content h2, .page-content h3, .page-content h4, .page-content h5, .page-content h6');
+  let tocList = document.querySelector('#toc ul');
+  let paddingTop = parseInt(getComputedStyle(document.body).getPropertyValue('padding-top'));
+
+  tocList.innerHTML = '<br>' + tocList.innerHTML;
+
+  headings.forEach(function(heading) {
+    let tocItem = document.createElement('li');
+    let tocLink = document.createElement('a');
+    let tag = heading.tagName.toLowerCase();
+    
+    tocItem.classList.add(tag);
+    tocLink.textContent = heading.textContent;
+    tocLink.addEventListener('click', function(e) {
+      e.preventDefault();
+      let scrollPosition = heading.offsetTop - paddingTop;
+      window.scrollTo({
+        top: scrollPosition,
+        behavior: 'smooth'
+      });
+    });
+    
+    tocItem.appendChild(tocLink);
+    tocList.appendChild(tocItem);
+  });
+
+}
