@@ -205,6 +205,11 @@ createToc = () => {
   let toc = document.querySelector('#toc');
   if (!toc) return;
 
+  let headings = document.querySelectorAll('.page-content h1, .page-content h2, .page-content h3, .page-content h4, .page-content h5, .page-content h6');
+  if (headings.length === 0) return;
+  let tocList = document.querySelector('#toc ul');
+  tocList.innerHTML = '<br>' + tocList.innerHTML;
+
   let tocToggle = document.querySelector('#toc-toggle');
   tocToggle.addEventListener('click', function() {
     toc.classList.toggle('open');
@@ -214,11 +219,6 @@ createToc = () => {
       behavior: 'smooth'
     });
   });
-
-  let headings = document.querySelectorAll('.page-content h1, .page-content h2, .page-content h3, .page-content h4, .page-content h5, .page-content h6');
-  let tocList = document.querySelector('#toc ul');
-
-  tocList.innerHTML = '<br>' + tocList.innerHTML;
 
   headings.forEach(function(heading) {
     let tocItem = document.createElement('li');
