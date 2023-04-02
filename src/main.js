@@ -211,7 +211,6 @@ createToc = () => {
 
   let headings = document.querySelectorAll('.page-content h1, .page-content h2, .page-content h3, .page-content h4, .page-content h5, .page-content h6');
   let tocList = document.querySelector('#toc ul');
-  let paddingTop = parseInt(getComputedStyle(document.body).getPropertyValue('padding-top'));
 
   tocList.innerHTML = '<br>' + tocList.innerHTML;
 
