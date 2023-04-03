@@ -20,7 +20,7 @@
 				<?php if (!empty($page->tags(true))): ?>
                 <p class="tag-container">
                     <?php foreach ($page->tags(true) as $tagKey=>$tagName): ?>
-                    <a href="<?php echo DOMAIN_TAGS.$tagKey ?>"><span class="tag"><?php echo $tagName; ?></span></a>
+                    <a class="tag" href="<?php echo DOMAIN_TAGS.$tagKey ?>"><?php echo $tagName; ?></a>
                     <?php endforeach ?>
                 </p>
                 <?php endif; ?>
@@ -128,7 +128,7 @@
 				<?php if (!empty($related->tags(true))): ?>
                 <p class="tag-container">
                     <?php foreach ($related->tags(true) as $tagKey=>$tagName): ?>
-                    <a href="<?php echo DOMAIN_TAGS.$tagKey ?>"><span class="tag"><?php echo $tagName; ?></span></a>
+                    <a class="tag" href="<?php echo DOMAIN_TAGS.$tagKey ?>"><?php echo $tagName; ?></a>
                     <?php endforeach ?>
                 </p>
                 <?php endif; ?>
