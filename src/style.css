@@ -95,6 +95,11 @@ a {
 a:hover {
 	color: #52796f;
 }
+a.title-link {
+	width: min-content;
+    display: block;
+    text-decoration: none;
+}
 .bold {
 	font-weight: bold;
 }
