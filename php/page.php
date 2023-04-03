@@ -120,7 +120,7 @@
 				<?php Theme::plugins('pageBegin'); ?>
 
 				<!-- Page title -->
-				<a href="<?php echo $related->permalink(); ?>">
+				<a class="title-link" href="<?php echo $related->permalink(); ?>">
 					<h2 class="title"><?php echo $related->title(); ?></h2>
 				</a>
 

@@ -36,7 +36,7 @@
 				<?php Theme::plugins('pageBegin'); ?>
 
 				<!-- Page title -->
-				<a href="<?php echo $page->permalink(); ?>">
+				<a class="title-link" href="<?php echo $page->permalink(); ?>">
 					<h2 class="title"><?php echo $page->title(); ?></h2>
 				</a>
 
