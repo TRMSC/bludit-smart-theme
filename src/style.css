@@ -74,13 +74,19 @@ blockquote {
     text-decoration: none;
     box-shadow: 0px 0px 15px 4px #e6ac0a00!important;
     white-space: nowrap;
+	font-variant: small-caps;
+	text-decoration: none!important;
+}
+.tag:hover {
+    color: #fbe8be;
+    border: 1px solid #e7cea5;
 }
 .page-info {
 	display: flex;
     flex-wrap: wrap;
     column-gap: 15px;
 	margin: 0px 0px 17px 2px;
-	font-style: italic;
+	font-variant: small-caps;
 }
 .page-info a,
 .page-info a:hover {
