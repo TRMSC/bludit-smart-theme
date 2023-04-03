@@ -99,7 +99,7 @@
 				<?php endif ?>
 
 				<!-- Page open -->
-				<a href="<?php echo $page->permalink(); ?>"><?php echo $L->get('Read more'); ?> <i class="fa fa-rocket"></i></a>
+				<a class="btn btn-secondary btn-sm" href="<?php echo $page->permalink(); ?>"><?php echo $L->get('Read more'); ?> <i class="fa fa-rocket"></i></a>
 
 				<!-- Load Bludit Plugins: Page End -->
 				<?php Theme::plugins('pageEnd'); ?>
