@@ -96,9 +96,9 @@ a:hover {
 	color: #52796f;
 }
 a.title-link {
-	width: max-content;
+	width: fit-content;
     display: block;
-    text-decoration: none;
+    text-decoration: none!important;
 }
 .bold {
 	font-weight: bold;
