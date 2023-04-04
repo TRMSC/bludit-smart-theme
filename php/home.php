@@ -21,12 +21,14 @@
 <?php foreach ($content as $page): ?>
 <section class="home-page">
 	<div class="container">
+
 	<div>
 		<div class="row page-preview">
 			<div class="col-lg-8 mx-auto">
 				<!-- Page cover image -->
 				<?php if ($page->coverImage()): ?>
 				<div class="page-cover-image py-6 mb-4">
+					<?php if ($page->isStatic()): ?><div class="text-right"><span style="font-variant: small-caps;">Static</span></div><?php endif; ?>
 					<img src="<?php echo $page->coverImage(); ?>" alt="<?php echo $page->custom('coverImageAlt'); ?>" style="height: 150px; width: 100%; object-fit: cover;">
 				</div>
 				<?php endif ?>

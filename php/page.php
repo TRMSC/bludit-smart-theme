@@ -111,6 +111,7 @@
 				<!-- Page cover image -->
 				<?php if ($related->coverImage()): ?>
 				<div class="page-cover-image py-6 mb-4">
+				<?php if ($related->isStatic()): ?><div class="text-right"><span style="font-variant: small-caps;">Static</span></div><?php endif; ?>
 					<img src="<?php echo $related->coverImage(); ?>" alt="<?php echo $related->custom('coverImageAlt'); ?>" style="height: 150px; width: 100%; object-fit: cover;">
 				</div>
 				<?php endif ?>
