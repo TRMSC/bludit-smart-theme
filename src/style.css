@@ -291,7 +291,7 @@ header.welcome {
 #search-clear {
 	filter: contrast(0.1);
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
 	.navbar-center {
 		align-items: center;
 	}

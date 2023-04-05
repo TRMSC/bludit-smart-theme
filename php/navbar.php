@@ -44,8 +44,8 @@
 				<?php foreach (Theme::socialNetworks() as $key=>$label): ?>
 				<li class="nav-item">
 					<a class="nav-link" href="<?php echo $site->{$key}(); ?>" target="_blank" title="<?php echo $label; ?>">
-						<img class="d-none d-sm-block nav-svg-icon" src="<?php echo DOMAIN_THEME.'img/'.$key.'.svg' ?>" alt="<?php echo $label ?>" />
-						<span class="d-inline d-sm-none"><?php echo $label; ?></span>
+						<img class="d-none d-lg-block nav-svg-icon" src="<?php echo DOMAIN_THEME.'img/'.$key.'.svg' ?>" alt="<?php echo $label ?>" />
+						<span class="d-inline d-lg-none"><?php echo $label; ?></span>
 					</a>
 				</li>
 				<?php endforeach; ?>
@@ -54,8 +54,8 @@
 				<?php if (Theme::rssUrl()): ?>
 				<li class="nav-item">
 					<a class="nav-link" href="<?php echo Theme::rssUrl() ?>" target="_blank" title="RSS">
-						<img class="d-none d-sm-block nav-svg-icon text-primary" src="<?php echo DOMAIN_THEME.'img/rss.svg' ?>" alt="RSS" />
-						<span class="d-inline d-sm-none">RSS</span>
+						<img class="d-none d-lg-block nav-svg-icon text-primary" src="<?php echo DOMAIN_THEME.'img/rss.svg' ?>" alt="RSS" />
+						<span class="d-inline d-lg-none">RSS</span>
 					</a>
 				</li>
 				<?php endif; ?>
@@ -63,8 +63,8 @@
 				<!-- Share --> 
 				<li class="nav-item share share-navbar">
 					<a class="nav-link" title="Share">
-						<i class="fa fa-share-alt d-none d-sm-block "></i>
-						<span class="d-inline d-sm-none">SHARE</span>
+						<i class="fa fa-share-alt d-none d-lg-block "></i>
+						<span class="d-inline d-lg-none">SHARE</span>
 					</a>
 				</li>
 
