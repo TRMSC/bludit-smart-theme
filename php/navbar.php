@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark text-uppercase">
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark text-uppercase">
 	<div class="container">
 
 		<?php $logo = "bl-content/uploads/" . $site->title() . ".png"; ?>
