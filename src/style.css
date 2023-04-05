@@ -342,17 +342,19 @@ header.welcome {
 	display: flex;
 	align-items: center;
 	max-height: 100px;
-  }
-  
-  .smart-preview-image {
+}
+.smart-preview-image {
 	max-height: 100px;
 	margin-right: 10px;
-  }
-  
-  .smart-preview-text {
+}
+.smart-preview-container:hover img {
+    filter: opacity(0.8);
+	transition: 0.1s;
+}
+.smart-preview-text {
 	max-height: inherit;
 	overflow: hidden;
-  }
+}
 .scroll-trigger {
     opacity: 0;
     transition: all 0.7s ease-in 0s;
