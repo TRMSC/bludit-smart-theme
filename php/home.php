@@ -28,7 +28,7 @@
 				<!-- Page cover image -->
 				<?php if ($page->coverImage()): ?>
 				<div class="page-cover-image py-6 mb-4">
-					<?php if ($page->isStatic()): ?><div class="text-right"><span style="font-variant: small-caps;">Static</span></div><?php endif; ?>
+					<?php if ($page->isStatic()): ?><div class="text-right"><span class="static-info"><?php $language->p('static-info') ?> <i class="fa fa-flag"></i></span></div><?php endif; ?>
 					<img src="<?php echo $page->coverImage(); ?>" alt="<?php echo $page->custom('coverImageAlt'); ?>" style="height: 150px; width: 100%; object-fit: cover;">
 				</div>
 				<?php endif ?>
