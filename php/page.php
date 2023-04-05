@@ -1,8 +1,8 @@
 <section class="page">
 	<div class="container">
 		<div class="row page-preview">
-
 			<div class="col-lg-8 mx-auto">
+				
 				<!-- Load Bludit Plugins: Page Begin -->
 				<?php Theme::plugins('pageBegin'); ?>
 
@@ -25,7 +25,7 @@
                 </p>
                 <?php endif; ?>
 
-				<!-- Page information START-->
+				<!-- Page information -->
 				<p class="page-info">
 
 					<!-- Page category -->
@@ -57,16 +57,11 @@
 						$plain = strip_tags($page->content());
 						$words = str_word_count($plain);
 						$wpm = 225;
-						if ($words <= $wpm) {
-							$time = '<1';
-						} else {
-							$time = round($words / $wpm);
-						}
+						$time = ($words <= $wpm) ? '<1' : round($words / $wpm);
 						echo $time . 'min';
 						?>
 					</span>
 
-				<!-- Page information END -->
 				</p>
 
 				<!-- Page description -->
@@ -108,6 +103,7 @@
 	<div>
 		<div class="row page-preview">
 			<div class="col-lg-8 mx-auto">
+
 				<!-- Page cover image -->
 				<?php if ($related->coverImage()): ?>
 				<div class="page-cover-image py-6 mb-4">
@@ -115,8 +111,10 @@
 					<img src="<?php echo $related->coverImage(); ?>" alt="<?php echo $related->custom('coverImageAlt'); ?>" style="height: 150px; width: 100%; object-fit: cover;">
 				</div>
 				<?php endif ?>
+
 			</div>
 			<div class="col-lg-8 mx-auto">
+
 				<!-- Load Bludit Plugins: Page Begin -->
 				<?php Theme::plugins('pageBegin'); ?>
 
@@ -166,11 +164,7 @@
 					$plain = strip_tags($related->content());
 					$words = str_word_count($plain);
 					$wpm = 225;
-					if ($words <= $wpm) {
-						$time = '<1';
-					} else {
-						$time = round($words / $wpm);
-					}
+					$time = ($words <= $wpm) ? '<1' : round($words / $wpm);
 					echo $time . 'min';
 					?>
 				</span>

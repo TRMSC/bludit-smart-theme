@@ -25,6 +25,7 @@
 	<div>
 		<div class="row page-preview">
 			<div class="col-lg-8 mx-auto">
+
 				<!-- Page cover image -->
 				<?php if ($page->coverImage()): ?>
 				<div class="page-cover-image py-6 mb-4">
@@ -32,8 +33,10 @@
 					<img src="<?php echo $page->coverImage(); ?>" alt="<?php echo $page->custom('coverImageAlt'); ?>" style="height: 150px; width: 100%; object-fit: cover;">
 				</div>
 				<?php endif ?>
+
 			</div>
 			<div class="col-lg-8 mx-auto">
+
 				<!-- Load Bludit Plugins: Page Begin -->
 				<?php Theme::plugins('pageBegin'); ?>
 
@@ -83,11 +86,7 @@
 					$plain = strip_tags($page->content());
 					$words = str_word_count($plain);
 					$wpm = 225;
-					if ($words <= $wpm) {
-						$time = '<1';
-					} else {
-						$time = round($words / $wpm);
-					}
+					$time = ($words <= $wpm) ? '<1' : round($words / $wpm);
 					echo $time . 'min';
 					?>
 				</span>
@@ -105,6 +104,7 @@
 
 				<!-- Load Bludit Plugins: Page End -->
 				<?php Theme::plugins('pageEnd'); ?>
+				
 			</div>
 		</div>
 	</div>
