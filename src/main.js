@@ -28,6 +28,7 @@ window.onload = () => {
     addAltText();
     generateShareImage();
     createToc();
+    addSmartPreview();
 
     // Call the Smart Plugin's runSmartPlugin function if it is installed
     if (typeof runSmartPlugin === 'function') {
@@ -240,4 +241,58 @@ createToc = () => {
     tocList.appendChild(tocItem);
   });
 
-}
+};
+
+
+
+/**
+ * Transform a-tags with the title="smart-preview" to link previews
+ *
+ * @function addSmartPreview
+ * @returns {void}
+ * 
+ */
+addSmartPreview = () => {
+
+  // Select all smart-preview elements
+  const smartPreviews = document.querySelectorAll('a[title="smart-preview"]');
+
+  // Loop through each link-preview element
+  smartPreviews.forEach(linkPreview => {
+    // Get the URL of the link
+    const url = linkPreview.getAttribute('href');
+    const target = linkPreview.getAttribute('target');
+
+    // Fetch the page data using the URL
+    fetch(url)
+      .then(response => response.text())
+      .then(data => {
+        // Parse the HTML data
+        const parser = new DOMParser();
+        const htmlDoc = parser.parseFromString(data, 'text/html');
+
+        // Get the title and image of the page
+        const title = htmlDoc.querySelector('title').textContent;
+        const description = htmlDoc.querySelector('meta[name="description"]')?.content;
+        const image = htmlDoc.querySelector('meta[property="og:image"]')?.content;
+
+        // Create the link preview element
+        const linkPreviewElem = document.createElement('a');
+        linkPreviewElem.setAttribute('target', target || '_self');
+        linkPreviewElem.href = url;
+        linkPreviewElem.title = title;
+        linkPreviewElem.classList.add('smart-preview');
+        linkPreviewElem.innerHTML = `
+            <div class="smart-preview-container">
+              <img class="smart-preview-image" src="${image}">
+              <div class="smart-preview-text">
+                <h6>${title}</h6><p>${description}</p></div>
+            </div>
+          `;
+
+        // Replace the link-preview element with the link preview
+        linkPreview.replaceWith(linkPreviewElem);
+      });
+  });
+
+};
