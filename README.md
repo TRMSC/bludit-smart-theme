@@ -10,7 +10,7 @@ This theme is a standalone part of the **Smart series** and it is recommended to
 
 There are a lot of additional features when using the Smart theme in combination with the Smart plugin 🧩. Because of this the following list shows all of the Smart series features together.
 
-### General:
+#### ✨ General:
 
 - **Responsive** and **modern** design concerning all parts of the DOM
 - Determination of **ideal aspect ratios** implemented through a **loading animation**
@@ -19,21 +19,21 @@ There are a lot of additional features when using the Smart theme in combination
 - **Customize navbar and footer entries** (Smart plugin 🧩)
 - **Light and dark mode** with the **advanced options** of **detecting system mode**, adding a **toggle button** in the navbar, setting **preferred mode** (Smart plugin 🧩)
 - **Save display mode** by **clientside cookie** (Smart plugin 🧩)
-- **Individual [cascading style sheets (CSS)](https://developer.mozilla.org/en-US/docs/Web/CSS?retiredLocale=de)** for light and dark mode (Smart plugin 🧩)
+- **Individual [Cascading Style Sheets (CSS)](https://developer.mozilla.org/en-US/docs/Web/CSS?retiredLocale=de)** for light and dark mode (Smart plugin 🧩)
 - Optional **scroll trigger animations** for predefined or customized selectors (Smart plugin 🧩)
 
-### Sharing:
+#### ✨ Sharing:
 
 - **Sharing Buttons** in the navigation bar respectively in the burger menu and within pages
 - Automatically created **[Open Graph](https://ogp.me/) meta tags**
-- Optionally add own **images for [Open Graph](https://ogp.me/)** tag on every page by using [cusom fields](#cusom-fields)
+- Optionally add own **images for [Open Graph](https://ogp.me/)** tag on every page by using [custom fields ⬇](#custom-fields)
 
-### Images:
+#### ✨ Images:
 
 - **Button on images** for showing their **alternative texts**
-- Add **alt tags for cover images** by using [cusom fields](#cusom-fields)
+- Add **alt tags for cover images** by using [custom fields ⬇](#custom-fields)
 
-### Pages:
+#### ✨ Pages:
 
 - **Display tags, categories, created, last edited, reading time** with appropriate icons
 - **Expandable table of contents** area with **clickable entries** automatically generated within pages
