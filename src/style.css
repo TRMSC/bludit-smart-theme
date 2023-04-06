@@ -114,6 +114,16 @@ a.title-link {
 section img {
 	border-radius: 5px;
 }
+.form-control {
+    background-color: transparent;
+    color: inherit;
+}
+.form-control:focus {
+	background-color: transparent;
+	color: inherit;
+    border-color: var(--light);
+    box-shadow: 0 0 10px 2px #91919178;
+}
 
 /* Icons */
 .fa-folder,
@@ -288,8 +298,9 @@ header.welcome {
 .nondescript:focus-visible {
 	outline: none;
 }
-#search-clear {
-	filter: contrast(0.1);
+#search-clear,
+input[type="search" i]::-webkit-search-cancel-button {
+	filter: contrast(0.1)!important;
 }
 @media (min-width: 992px) {
 	.navbar-center {
