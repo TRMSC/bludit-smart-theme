@@ -1,6 +1,5 @@
 <?php
-function generatePageInfo($reference)
-{
+function generatePageInfo($reference) {
 
     ?>
     <!-- Page tags -->
