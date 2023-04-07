@@ -9,6 +9,7 @@
 				<!-- Page cover image -->
 				<?php if ($page->coverImage()): ?>
 					<div class="py-6 mb-4">
+						<?php if ($page->isStatic()): ?><div class="text-right"><span class="static-info"><?php $language->p('static-info') ?> <i class="fa fa-flag"></i></span></div><?php endif; ?>
 						<img src="<?php echo $page->coverImage(); ?>" alt="<?php echo $page->custom('coverImageAlt'); ?>">
 					</div>
 				<?php endif ?>
