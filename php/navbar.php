@@ -1,6 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark text-uppercase">
 	<div class="container">
 
+		<!-- Logo -->
 		<?php $logo = "bl-content/uploads/" . $site->title() . ".png"; ?>
 
 		<?php if (file_exists($logo)): ?>
@@ -28,7 +29,7 @@
 				<!-- Static pages with smart plugin -->
 				<?php Theme::plugins('controlNavItems'); ?>
 
-				<!-- Alternative static -->
+				<!-- Alternative static pages -->
 				<?php if (!class_exists('pluginSmart')) : ?> 
 					<?php foreach ($staticContent as $staticPage): ?>
 					<li class="nav-item">

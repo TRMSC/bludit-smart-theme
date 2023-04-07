@@ -68,6 +68,7 @@
 
 	<!-- Load Bludit Plugins: Site head -->
 	<?php Theme::plugins('siteHead'); ?>
+
 </head>
 <body class="<?php Theme::plugins('bodyClass') ?>">
 

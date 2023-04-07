@@ -11,13 +11,14 @@
     </header>
 <?php endif; ?>
 
-<!-- Content -->
+<!-- Empty Content -->
 <?php if (empty($content)): ?>
 	<div class="text-center p-4">
 	<?php $language->p('No pages found') ?>
 	</div>
 <?php endif ?>
 
+<!-- Content -->
 <?php foreach ($content as $page): ?>
 <section class="home-page">
 	<div class="container">

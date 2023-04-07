@@ -1,9 +1,15 @@
 <footer class="footer bg-dark">
 	<div class="container">
+
+		<!-- Footer first row -->
 		<div id="footer-first-row" class="row footer-row text-white">
+
+			<!-- Footer text -->
 			<div id="footer-text" class="col footer-col footer-left">
 				<?php echo $site->footer(); ?>
 			</div>
+
+				<!-- Check footer content -->
 				<?php 
 					$footerlinks = '';
 					if (class_exists('pluginSmart')) {
@@ -12,6 +18,8 @@
 					}
 					echo '<div id="footer-source" class="col footer-col ' . (empty($footerlinks) ? 'footer-right' : 'footer-center') . '">';
 				?>
+
+				<!-- Reference -->
 				<span class="text-white no-break">
 					<a target="_blank" class="text-white" href="https://www.bludit.com/">Powered by Bludit</a>
 				</span>
@@ -20,12 +28,20 @@
 					<a target="_blank" class="text-warning" href="https://github.com/TRMSC/bludit-smart-theme">Smart theme by TRMSC</a>
 				</span>
 			</div>
+
+				<!-- Footer links -->
 				<?php Theme::plugins('addFooterLinks'); ?>
+
 		</div>
+
+		<!-- Footer second row -->
 		<div id="footer-second-row" class="row footer-row text-white">
+
+			<!-- Additional text -->
 			<div id="footer-additional-text" class="col footer-col">
 				<?= class_exists('pluginSmart') ? html_entity_decode($pluginSmart->getValue('footerText')) : '' ?>
 			</div>
+
 		</div>
 	</div>
 </footer>
