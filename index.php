@@ -74,6 +74,9 @@
 	<!-- Load Bludit Plugins: Site Body Begin -->
 	<?php Theme::plugins('siteBodyBegin'); ?>
 
+	<!-- Include utils -->
+	<?php include(THEME_DIR_PHP . '/utils/pageinfo.php'); ?>
+
 	<!-- Navbar -->
 	<?php include(THEME_DIR_PHP.'navbar.php'); ?>
 
