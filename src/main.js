@@ -164,7 +164,7 @@ sharePage = async () => {
  */
 addAltText = () => {
 
-  const images = document.querySelectorAll(".page img, .welcome img, .page-preview img");
+  const images = document.querySelectorAll(".page img, .welcome img, .page-preview img, .landingpage-image");
 
   images.forEach(image => {
     const altText = image.alt;
