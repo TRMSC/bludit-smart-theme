@@ -91,7 +91,7 @@
 	<?php echo Theme::jquery(); ?>
 
 	<!-- Include javascript Bootstrap file from Bludit Core -->
-	<script src="../bl-kernel/js/bootstrap.bundle.min.js"></script>
+	<?php echo Theme::jsBootstrap(); ?>
 
 	<!-- Load Bludit Plugins: Site Body End -->
 	<?php Theme::plugins('siteBodyEnd'); ?>
