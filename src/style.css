@@ -279,6 +279,13 @@ header.welcome {
     padding: 0px 10px;
 	margin-bottom: 3px;
 	justify-content: space-between;
+	flex-wrap: nowrap;
+}
+@media (min-width: 992px) {
+	.search-container {
+		width: 120px;
+		padding-right: 20px;
+	}
 }
 .search-container .fa-search {
 	color: rgba(255,255,255,.5);
