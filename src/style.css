@@ -170,6 +170,20 @@ img.nav-svg-icon {
 .share-navbar i {
 	font-size: x-large;
 }
+@media (min-width: 992px) {
+    .current-nav-link {
+        background-color: #454b50;
+        border-radius: 2px;
+    }
+}
+@media (max-width: 991px) {
+    .current-nav-link {
+        text-decoration: underline;
+        text-underline-position: under;
+		text-decoration-color: #454b50;
+		text-decoration-thickness: 3px;
+    }
+}
 
 /* Footer */
 footer {
