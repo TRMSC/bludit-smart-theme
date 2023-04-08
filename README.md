@@ -14,7 +14,7 @@ There are a lot of additional features when using the Smart theme in combination
 
 - **Responsive** and **modern** design concerning all parts of the DOM
 - Determination of **ideal aspect ratios** implemented through a **loading animation**
-- **Default header** with websites title and description above the posts
+- **Default header** with websites title and description above the posts on the main page
 - Substitute default header for the home page by adding a **landingpage** (Smart plugin 🧩)
 - **Customize navbar and footer entries** (Smart plugin 🧩)
 - **Light and dark mode** with the **advanced options** of **detecting system mode**, adding a **toggle button** in the navbar, setting **preferred mode** (Smart plugin 🧩)
