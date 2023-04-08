@@ -49,6 +49,13 @@
 				<!-- Page information -->
 				<?php generatePageInfo($page); ?>
 
+				<!-- Page description -->
+				<?php if ($page->description()): ?>
+					<p class="page-description">
+						<?php echo $page->description(); ?>
+					</p>
+				<?php endif ?>
+
 				<!-- Page open -->
 				<a class="btn btn-secondary btn-sm" href="<?php echo $page->permalink(); ?>"><?php echo $L->get('Read more'); ?> <i class="fa fa-rocket"></i></a>
 
