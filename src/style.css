@@ -146,8 +146,8 @@ section img {
 	box-shadow: 0 0 12px 0px #343a40;
 }
 img.nav-svg-icon {
-	height: 18px;
-	width: auto;
+	height: 16px;
+	width: 16px;
 	padding-bottom: 2px;
 }
 .nav-link {
@@ -168,7 +168,7 @@ img.nav-svg-icon {
     transform: rotate(270deg);
 }
 .share-navbar i {
-	font-size: x-large;
+	font-size: 20px;
 }
 @media (min-width: 992px) {
     .current-nav-link {
@@ -183,6 +183,11 @@ img.nav-svg-icon {
 		text-decoration-color: #454b50;
 		text-decoration-thickness: 3px;
     }
+	.share-navbar .nav-link {
+		display: flex;
+    	align-items: flex-end;
+    	gap: 2px;
+	}
 }
 
 /* Footer */
