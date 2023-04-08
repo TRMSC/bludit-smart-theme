@@ -39,7 +39,8 @@ There are a lot of additional features when using the Smart theme in combination
 - **Expandable table of contents** area with **clickable entries** automatically generated within pages
 - **Related pages** at the end of pages
 - **Notice badge for static sites** within search and browse sections
-- Prepare urls within pages as **preview links** by naming the link title "smart-preview" (can be done within the HTML code or directly within the Tiny MCE editor when a link is added)
+- **Differentiated display** of posts and static pages
+- Prepare urls within pages as [preview links ⬇](#preview-links)
 
 ## Custom fields
 Smart theme supports the following [custom fields](https://docs.bludit.com/en/content/custom-fields).  
@@ -62,6 +63,11 @@ The fields are also documented within the smart plugins settings 🧩.
     "position": "bottom"
 }
 ```
+
+## Preview links
+
+Prepare urls within pages as **preview links** by naming the link title as "`smart-preview`". This can be done within the HTML code or directly within the Tiny MCE editor when a link is added.  
+Preview links are displayed with the image, title and description of their target urls.
 
 ## License notes
 
