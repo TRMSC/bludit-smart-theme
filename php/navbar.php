@@ -33,7 +33,7 @@
 				<?php if (!class_exists('pluginSmart')) : ?> 
 					<?php foreach ($staticContent as $staticPage): ?>
 					<li class="nav-item">
-						<a class="nav-link" href="<?php echo $staticPage->permalink(); ?>"><?php echo $staticPage->title(); ?></a>
+						<a class="nav-link<?php echo $staticPage->permalink() === $page->permalink() ? ' current-nav-link' : ''; ?>" href="<?php echo $staticPage->permalink(); ?>"><?php echo $staticPage->title(); ?></a>
 					</li>
 					<?php endforeach ?>
 				<?php endif; ?>
