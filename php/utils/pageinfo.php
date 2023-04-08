@@ -55,12 +55,5 @@ function generatePageInfo($reference) {
 
     </p>
 
-    <!-- Page description -->
-    <?php if ($reference->description()): ?>
-        <p class="page-description">
-            <?php echo $reference->description(); ?>
-        </p>
-    <?php endif ?>
-
     <?php
 }
