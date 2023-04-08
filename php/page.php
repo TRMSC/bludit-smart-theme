@@ -6,21 +6,64 @@
 				<!-- Load Bludit Plugins: Page Begin -->
 				<?php Theme::plugins('pageBegin'); ?>
 
+				<?php if ($page->isStatic()): ?>
+
+					<p class="page-info m-0 mb-2">
+
+						<!-- Main page --> 
+						<span class="no-break">
+							<i class="fa fa-flag"></i>
+							<span><?php $language->p('static-info') ?></span>
+						</span>
+
+						<!-- Page modified -->
+						<?php if ($page->dateModified()): ?>
+							<span class="no-break">
+								<i class="fa fa-history"></i>
+								<span>
+									<?php echo $page->dateModified(); ?>
+								</span>
+							</span>
+						<?php endif; ?>
+
+						<!-- Page reading time -->
+						<span class="no-break">
+							<i class="fa fa-book"></i>
+							<?php
+							$plain = strip_tags($page->content());
+							$words = str_word_count($plain);
+							$wpm = 225;
+							$time = ($words <= $wpm) ? '<1' : round($words / $wpm);
+							echo $time . 'min';
+							?>
+						</span>
+					</p>
+
+					<!-- Page title -->
+					<h1 id="page-title" class="title mb-4"><?php echo $page->title(); ?></h1>	
+				<?php endif; ?>
+
 				<!-- Page cover image -->
 				<?php if ($page->coverImage()): ?>
 					<div class="py-6 mb-4">
-						<?php if ($page->isStatic()): ?><div class="text-right"><span class="static-info"><?php $language->p('static-info') ?> <i class="fa fa-flag"></i></span></div><?php endif; ?>
 						<img src="<?php echo $page->coverImage(); ?>" alt="<?php echo $page->custom('coverImageAlt'); ?>">
 					</div>
 				<?php endif ?>
 
-				<!-- Page title -->
-				<h1 id="page-title" class="title">
-					<?php echo $page->title(); ?>
-				</h1>
+				<?php if (!$page->isStatic()): ?>
+					<!-- Page title -->
+					<h1 id="page-title" class="title"><?php echo $page->title(); ?></h1>
 
-				<!-- Page information -->
-				<?php generatePageInfo($page); ?>
+					<!-- Page information -->
+					<?php generatePageInfo($page); ?>
+				<?php endif; ?>
+
+				<!-- Page description -->
+				<?php if ($page->description()): ?>
+					<p class="page-description">
+						<?php echo $page->description(); ?>
+					</p>
+				<?php endif ?>
 
 				<!-- Buttons -->
 				<p></p>
@@ -91,6 +134,13 @@ foreach ($relatedPages as $pageKey): ?>
 
 						<!-- Page information -->
 						<?php generatePageInfo($related); ?>
+
+						<!-- Page description -->
+						<?php if ($related->description()): ?>
+							<p class="page-description">
+								<?php echo $related->description(); ?>
+							</p>
+						<?php endif ?>
 
 						<!-- Page open -->
 						<a class="btn btn-secondary btn-sm" href="<?php echo $related->permalink(); ?>"><?php echo $L->get('Read more'); ?> <i class="fa fa-rocket"></i></a>
