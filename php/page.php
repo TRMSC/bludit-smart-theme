@@ -26,21 +26,11 @@
 							</span>
 						<?php endif; ?>
 
-						<!-- Page reading time -->
-						<span class="no-break">
-							<i class="fa fa-book"></i>
-							<?php
-							$plain = strip_tags($page->content());
-							$words = str_word_count($plain);
-							$wpm = 225;
-							$time = ($words <= $wpm) ? '<1' : round($words / $wpm);
-							echo $time . 'min';
-							?>
-						</span>
 					</p>
 
 					<!-- Page title -->
 					<h1 id="page-title" class="title mb-4"><?php echo $page->title(); ?></h1>	
+					
 				<?php endif; ?>
 
 				<!-- Page cover image -->
