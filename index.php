@@ -81,10 +81,15 @@
 	<!-- Navbar -->
 	<?php include(THEME_DIR_PHP.'navbar.php'); ?>
 
-	<!-- Content -->
-	<?php include($WHERE_AM_I == 'page' ? THEME_DIR_PHP.'page.php' : THEME_DIR_PHP.'home.php'); ?>
+	<span id="main-content">
 
-	<button id="back-to-top" class="btn btn-dark"><i class="fa fa-chevron-up"></i></button>
+		<!-- Content -->
+		<?php include($WHERE_AM_I == 'page' ? THEME_DIR_PHP.'page.php' : THEME_DIR_PHP.'home.php'); ?>
+
+		<!-- Back to top button -->
+		<button id="back-to-top" class="btn btn-dark"><i class="fa fa-chevron-up"></i></button>
+
+	</span>
 
 	<!-- Footer -->
 	<?php include(THEME_DIR_PHP.'footer.php'); ?>
