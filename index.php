@@ -84,6 +84,8 @@
 	<!-- Content -->
 	<?php include($WHERE_AM_I == 'page' ? THEME_DIR_PHP.'page.php' : THEME_DIR_PHP.'home.php'); ?>
 
+	<button id="back-to-top" class="btn btn-dark"><i class="fa fa-chevron-up"></i></button>
+
 	<!-- Footer -->
 	<?php include(THEME_DIR_PHP.'footer.php'); ?>
 

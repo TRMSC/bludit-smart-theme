@@ -45,6 +45,9 @@ window.onload = () => {
     for (let i = 0; i < shareElements.length; i++) {
       addClickEvent(shareElements[i], sharePage);
     }
+
+    // Add event listener for scrolling to top
+    window.addEventListener("scroll", scrollToTop);
   
 };
 
@@ -217,7 +220,7 @@ createToc = () => {
     toc.classList.toggle('open');
     toc.classList.toggle('close');
     window.scrollTo({
-      top: toc.classList.contains('close') ? heading.offsetTop : toc.offsetTop,
+      top: toc.classList.contains('close') ? (toc.offsetTop - 2 * tocToggle.offsetHeight) : toc.offsetTop,
       behavior: 'smooth'
     });
   });
@@ -240,6 +243,44 @@ createToc = () => {
     
     tocItem.appendChild(tocLink);
     tocList.appendChild(tocItem);
+  });
+
+};
+
+
+/**
+ * Control button for scrolling to top
+ * 
+ * @function scrollToTop
+ * @returns {void}
+ * 
+ */
+scrollToTop = () => {
+
+  // Check pages offset
+  const backToTopButton = document.querySelector("#back-to-top");
+  if (window.pageYOffset > 300) { 
+    backToTopButton.classList.add("show");
+  } else {
+    backToTopButton.classList.remove("show");
+  }
+
+  // Calculate the height of the footer and assign it to the bottom property of the button
+  const footer = document.querySelector("footer");
+  const footerHeight = footer.offsetHeight;
+  const windowHeight = window.innerHeight;
+  const documentHeight = document.documentElement.scrollHeight;
+  const currentPosition = window.pageYOffset + windowHeight;
+  const isReachedFooter = currentPosition > documentHeight - footerHeight;
+  const bottomPosition = isReachedFooter ? footerHeight + 20 : 20;
+  backToTopButton.style.bottom = `${bottomPosition}px`;
+
+  // Scroll to top
+  backToTopButton.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
   });
 
 };

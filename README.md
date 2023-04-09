@@ -21,6 +21,7 @@ There are a lot of additional features when using the Smart theme in combination
 - **Save display mode** by **clientside cookie** (Smart plugin 🧩)
 - **Individual [Cascading Style Sheets (CSS)](https://developer.mozilla.org/en-US/docs/Web/CSS?retiredLocale=de)** for light and dark mode (Smart plugin 🧩)
 - Optional **scroll trigger animations** for predefined or customized selectors (Smart plugin 🧩)
+- **Button** for **scrolling to top**
 
 ### ✨ Sharing:
 
