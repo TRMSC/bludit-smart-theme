@@ -197,6 +197,7 @@ addAltText = () => {
 };
 
 
+
 /**
  * Create table of contents and handle button for interacting
  * 
@@ -215,7 +216,6 @@ createToc = () => {
   tocList.innerHTML = '<br>' + tocList.innerHTML;
 
   let tocToggle = document.querySelector('#toc-toggle');
-  let heading = document.querySelector('#page-title');
   tocToggle.addEventListener('click', function() {
     toc.classList.toggle('open');
     toc.classList.toggle('close');
@@ -246,6 +246,7 @@ createToc = () => {
   });
 
 };
+
 
 
 /**
