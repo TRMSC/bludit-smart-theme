@@ -3,12 +3,12 @@
 
 <!-- Alternative header -->
 <?php if (!class_exists('pluginSmart')) : ?> 
-    <header class="welcome">
-        <div class="container text-center">
+    <section class="welcome">
+        <div class="container">
             <?php echo ($site->slogan()) ? '<h1>' . $site->slogan() . '</h1>' : ''; ?>
             <?php echo $site->description() ? '<p class="lead">' . $site->description() . '</p>' : ''; ?>
         </div>
-    </header>
+	</section>
 <?php endif; ?>
 
 <!-- Empty Content -->
