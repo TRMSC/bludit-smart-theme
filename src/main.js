@@ -193,7 +193,7 @@ addAltText = () => {
     button.style.margin = "10px";
     button.style.maxWidth = image.offsetWidth - 20 + "px";
     button.textContent = "ALT";
-    button.classList.add('btn', 'btn-dark', 'btn-sm');
+    button.classList.add('btn', 'btn-dark', 'btn-sm', 'text-left');
 
     button.addEventListener("click", () => {
       if (button.textContent === "ALT") {
