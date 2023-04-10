@@ -17,7 +17,7 @@
 						</span>
 
 						<!-- Page modified -->
-						<?php if ($page->dateModified()): ?>
+						<?php if ($page->dateModified() && $page->dateModified() !== $page->date()): ?>
 							<span class="no-break">
 								<i class="fa fa-history"></i>
 								<span>

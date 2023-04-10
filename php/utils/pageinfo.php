@@ -32,7 +32,7 @@ function generatePageInfo($reference) {
         </span>
 
         <!-- Page modified -->
-        <?php if ($reference->dateModified()): ?>
+        <?php if ($reference->dateModified() && $reference->dateModified() !== $reference->date()): ?>
             <span class="no-break">
                 <i class="fa fa-history"></i>
                 <span>
