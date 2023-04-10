@@ -142,7 +142,8 @@ section img {
 
 /* Navbar */
 .navbar,
-.footer {
+.footer,
+.landingpage-image {
 	box-shadow: 0 0 12px 0px #343a40;
 }
 img.nav-svg-icon {
