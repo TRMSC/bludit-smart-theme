@@ -1,15 +1,28 @@
-<!-- Area for landing -->
-<?php Theme::plugins('addLandingpage'); ?>
+<?php if ($WHERE_AM_I === 'search'): ?>
 
-<!-- Alternative header -->
-<?php if (!class_exists('pluginSmart')) : ?> 
-    <section class="welcome">
-        <div class="container">
-            <?php echo ($site->slogan()) ? '<h1>' . $site->slogan() . '</h1>' : ''; ?>
-            <?php echo $site->description() ? '<p class="lead">' . $site->description() . '</p>' : ''; ?>
-        </div>
+	<!-- Search heading -->
+	<section class="welcome">
+		<div class="container">
+			<h1><?php $language->p('results') ?></h1>
+		</div>
 	</section>
-<?php endif; ?>
+
+<?php else: ?>
+
+	<!-- Area for landing -->
+	<?php Theme::plugins('addLandingpage'); ?>
+
+	<?php if (!class_exists('pluginSmart')) : ?>
+		<!-- Alternative header -->
+		<section class="welcome">
+			<div class="container">
+				<?php echo ($site->slogan()) ? '<h1>' . $site->slogan() . '</h1>' : ''; ?>
+				<?php echo $site->description() ? '<p class="lead">' . $site->description() . '</p>' : ''; ?>
+			</div>
+		</section>
+	<?php endif; ?>
+
+<?php endif ?>
 
 <!-- Empty Content -->
 <?php if (empty($content)): ?>
