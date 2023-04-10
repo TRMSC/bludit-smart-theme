@@ -65,15 +65,15 @@ The fields are also documented within the smart plugins settings 🧩.
 }
 ```
 
-## Preview links
+## HTML implementations
+
+### Preview links:
 
 Prepare urls within pages as **preview links** by naming the link title as `smart-preview`. This can be done within the HTML code or directly within the Tiny MCE editor when a link is added.  
 Preview links are displayed with the image, title and description of their target urls.  
 This feature is also documented within the smart plugins settings 🧩.
 
-## Classes
-
-### Share:
+### Share elements:
 
 Use the class `share` for html elements to open the share dialog when it is clicked.  
 
