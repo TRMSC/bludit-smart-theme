@@ -138,23 +138,36 @@ generateShareImage = () => {
 sharePage = async () => {
 
   if (navigator.share) {
+
+    // Try using share API
     try {
       await navigator.share(shareData);
       console.log('Shared successfully');
     } catch (err) {
       console.log(`Error: ${err}`);
     }
+
   } else {
-      const tempElement = document.createElement("input");
-      tempElement.value = shareData.url;
-      document.body.appendChild(tempElement);
-      tempElement.select();
-      document.execCommand("copy");
-      document.body.removeChild(tempElement);
-      alert('📋✔');    
+
+    // Copy to clipboard
+    const tempElement = document.createElement("input");
+    tempElement.value = shareData.url;
+    document.body.appendChild(tempElement);
+    tempElement.select();
+    document.execCommand("copy");
+    document.body.removeChild(tempElement);   
+
+    // Show info
+    const popup = document.getElementById("clipboard-info");
+    popup.classList.add("show");
+    setTimeout(function() {
+      popup.classList.remove("show");
+    }, 1800);
   }
   
 };
+
+
 
 
 

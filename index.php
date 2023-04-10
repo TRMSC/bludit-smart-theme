@@ -89,6 +89,8 @@
 		<!-- Back to top button -->
 		<button id="back-to-top" class="btn btn-dark"><i class="fa fa-chevron-up"></i></button>
 
+		<div id="clipboard-info" class="bg-dark"><?php $language->p('share-info') ?> <i class="fa fa-check"></i></div>
+
 	</span>
 
 	<!-- Footer -->

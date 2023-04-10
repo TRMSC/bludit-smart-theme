@@ -378,6 +378,28 @@ input[type="search" i]::-webkit-search-cancel-button {
 	visibility: visible;
 }
 
+/* CLIPBOARD INFO */
+#clipboard-info {
+  position: fixed;
+  z-index: 9999;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  border-radius: 0.2rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0s linear 0.3s;
+}
+
+#clipboard-info.show {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0s;
+}
+
+
 /* SMART PLUGIN  */
 .switch-menu {
     display: flex;
