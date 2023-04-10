@@ -142,7 +142,6 @@ sharePage = async () => {
     // Try using share API
     try {
       await navigator.share(shareData);
-      console.log('Shared successfully');
     } catch (err) {
       console.log(`Error: ${err}`);
     }
