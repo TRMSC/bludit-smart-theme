@@ -90,19 +90,19 @@
 		<!-- Previous button -->
 		<?php if (Paginator::showPrev()): ?>
 		<li class="page-item mr-2">
-			<a class="page-link" href="<?php echo Paginator::previousPageUrl() ?>" tabindex="-1">&#9664; <?php echo $L->get('Previous'); ?></a>
+			<a href="<?php echo Paginator::previousPageUrl() ?>" tabindex="-1"><button class="btn btn-dark"><i class="fa fa-chevron-left"></i> <?php echo $L->get('Previous'); ?></button></a>
 		</li>
 		<?php endif; ?>
 
 		<!-- Home button -->
 		<li class="page-item <?php if (Paginator::currentPage()==1) echo 'disabled' ?>">
-			<a class="page-link" href="<?php echo Theme::siteUrl() ?>"><?php echo $L->get('Home'); ?></a>
+			<a href="<?php echo Theme::siteUrl() ?>"><button class="btn btn-dark"><?php echo $L->get('Home'); ?> <i class="fa fa-home"></i></button></a>
 		</li>
 
 		<!-- Next button -->
 		<?php if (Paginator::showNext()): ?>
 		<li class="page-item ml-2">
-			<a class="page-link" href="<?php echo Paginator::nextPageUrl() ?>"><?php echo $L->get('Next'); ?> &#9658;</a>
+			<a href="<?php echo Paginator::nextPageUrl() ?>"><button class="btn btn-dark"><?php echo $L->get('Next'); ?> <i class="fa fa-chevron-right"></i></button></a>
 		</li>
 		<?php endif; ?>
 	</ul>
