@@ -67,9 +67,9 @@
 
 				<!-- Share --> 
 				<li class="nav-item share share-navbar">
-					<a class="nav-link" title="Share">
+					<a class="nav-link" title="<?php $language->p('share') ?>">
 						<i class="fa fa-share-alt d-lg-block "></i>
-						<span class="d-inline d-lg-none"> SHARE</span>
+						<span class="d-inline d-lg-none"> <?php $language->p('share') ?></span>
 					</a>
 				</li>
 
