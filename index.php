@@ -11,46 +11,50 @@
 	<meta property="og:locale" content="<?php echo $site->language(); ?>">
 
 	<?php 
+	if (class_exists('pluginSmart')): $pluginSmart = new pluginSmart(); endif;
+	$img = '';
+	if ($WHERE_AM_I=='home') {
+		echo '<meta property="og:title" content="' . $site->slogan() . '">' . "\n";
+		echo '<meta property="og:description" content="' . $site->description() . '">' . "\n";
 		if (class_exists('pluginSmart')) {
-			$pluginSmart = new pluginSmart();
-		}
-		// $img = false;
-		if ($WHERE_AM_I=='home') {
-			echo '<meta property="og:title" content="' . $site->slogan() . '">' . "\n";
-			echo '<meta property="og:description" content="' . $site->description() . '">' . "\n";
-			if (class_exists('pluginSmart')) {
-				$landingpage = $pluginSmart->getValue('landingpage');
-				foreach ($staticContent as $page) {
-					if ($page->permalink() == $landingpage ) {
-							echo '<meta property="og:image" content="' . (($page->custom('altOG')) ? $page->custom('altOG') : $page->coverImage()) . '">' . "\n";
-							// $img = true;
-					} 
-				}
+			$landingpage = $pluginSmart->getValue('landingpage');
+			foreach ($staticContent as $page) {
+				if ($page->permalink() == $landingpage ) {
+						if ($page->custom('altOG')): $img = $page->custom('altOG');
+						elseif ($page->coverImage()): $img = $page->coverImage();
+						endif;
+				} 
 			}
-		} elseif ($WHERE_AM_I=='page') {
-			echo '<meta property="og:title" content="' . $page->title() . '">' . "\n";
-			echo '<meta property="og:description" content="' . $page->description() . '">' . "\n";
-			echo '<meta property="og:image" content="' . (($page->custom('altOG')) ? $page->custom('altOG') : $page->coverImage()) . '">' . "\n";
-			// $img = true;
 		}
-		// if $img === false -> Use favicon or website logo
+	} elseif ($WHERE_AM_I=='page') {
+		echo '<meta property="og:title" content="' . $page->title() . '">' . "\n";
+		echo '<meta property="og:description" content="' . $page->description() . '">' . "\n";
+		if ($page->custom('altOG')): $img = $page->custom('altOG');
+		elseif ($page->coverImage()): $img = $page->coverImage();
+		endif;
+	}
+	if (!empty($img)): echo '<meta property="og:image" content="' . $img . '">' . "\n"; endif;
 	?>
 
 	<!-- Dynamic tags -->
 	<?php echo Theme::metaTagTitle(); ?>
 	<?php echo Theme::metaTagDescription(); ?>
 
-	<!-- Include Favicon -->
+	<!-- Include Favicon and OG:Image fallback -->
 	<?php 
-		if (class_exists('pluginSmart') && $pluginSmart->getValue('favicon')) {
-				echo '<link rel="icon" href="'.$pluginSmart->getValue('favicon').'" type="image/png">';
-		} else {
-			$favicon = "bl-content/uploads/" . $site->title() . ".png";
-			if (file_exists($favicon)) {
-				echo '<link rel="icon" href="/'.$favicon.'" type="image/png">';
-			}
+	if (class_exists('pluginSmart') && $pluginSmart->getValue('favicon')) {
+			if (empty($img)): echo '<meta property="og:image" content="' . $pluginSmart->getValue('favicon') . '">' . "\n"; endif;
+			echo '<link rel="icon" href="'.$pluginSmart->getValue('favicon').'" type="image/png">';
+	} else {
+		$favicon = "bl-content/uploads/" . $site->title() . ".png";
+		if (file_exists($favicon)) {
+			if (empty($img)): echo '<meta property="og:image" content="/' . $favicon . '">' . "\n"; endif;
+			echo '<link rel="icon" href="/'.$favicon.'" type="image/png">';
 		}
+	}
 	?>
+
+
 
 	<!-- Include CSS Bootstrap file from Bludit Core -->
 	<?php echo Theme::cssBootstrap(); ?>
