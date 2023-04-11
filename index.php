@@ -1,9 +1,14 @@
 <!DOCTYPE html>
 <html lang="<?php echo Theme::lang() ?>">
 <head>
+	<!-- General meta tags -->
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta name="generator" content="Bludit">
+
+	<!-- Dynamic meta tags -->
+	<?php echo Theme::metaTagTitle(); ?>
+	<?php echo Theme::metaTagDescription(); ?>
 
 	<!-- Open graph meta tags -->
 	<meta property="og:site_name" content="<?php echo $site->title(); ?>">
@@ -36,11 +41,7 @@
 	if (!empty($img)): echo '<meta property="og:image" content="' . $img . '">' . "\n"; endif;
 	?>
 
-	<!-- Dynamic tags -->
-	<?php echo Theme::metaTagTitle(); ?>
-	<?php echo Theme::metaTagDescription(); ?>
-
-	<!-- Include Favicon and OG:Image fallback -->
+	<!-- Include favicon and possible fallback for og:image meta tag -->
 	<?php 
 	if (class_exists('pluginSmart') && $pluginSmart->getValue('favicon')) {
 			if (empty($img)): echo '<meta property="og:image" content="' . $pluginSmart->getValue('favicon') . '">' . "\n"; endif;
@@ -53,8 +54,6 @@
 		}
 	}
 	?>
-
-
 
 	<!-- Include CSS Bootstrap file from Bludit Core -->
 	<?php echo Theme::cssBootstrap(); ?>
