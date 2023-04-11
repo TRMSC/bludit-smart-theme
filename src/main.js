@@ -26,7 +26,6 @@ window.onload = () => {
     // Run internal functions
     setBodyPadding();
     addAltText();
-    generateShareImage();
     createToc();
     addSmartPreview();
 
@@ -77,51 +76,6 @@ setBodyPadding = async () => {
       top: newScroll,
       behavior: 'smooth'
     });
-
-};
-
-
-
-/**
- * Discover image for generating og meta tag
- *
- * @function generateShareImage
- * @returns {void}
- * 
- */
-generateShareImage = () => {
-
-  const discoverImage = () => {
-
-    // Search for landing page image
-    let shareImage = document.querySelector('img.landingpage-image');
-    if (shareImage) {
-      return shareImage.src;
-    }
-
-    // Search for cover image
-    shareImage = document.querySelector('.page-cover-image');
-    if (shareImage ) {
-      return shareImage.style.backgroundImage.replace(/^url\(['"]?/, '').replace(/['"]?\)$/, '');
-    }
-
-    // Search for favicon
-    shareImage = document.querySelector('link[rel="shortcut icon"], link[rel="icon"]');
-    if (shareImage) {
-      return shareImage.href;
-    }
-
-    // No image found
-    return null;
-  
-  };
-
-  const shareImageUrl = discoverImage();
-  const headElement = document.querySelector('head');
-  const ogImageMetaTag = document.createElement('meta');
-  ogImageMetaTag.setAttribute('property', 'og:image');
-  ogImageMetaTag.setAttribute('content', shareImageUrl);
-  headElement.appendChild(ogImageMetaTag);
 
 };
 
