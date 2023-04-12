@@ -64,7 +64,7 @@ blockquote {
 .tag-container {
 	margin-bottom: 8px;
 }
-.tag {
+.tag-container .tag {
 	padding: 1px 10px 3px 10px;
     border: 1px solid #bea984;
     border-radius: 15px;
