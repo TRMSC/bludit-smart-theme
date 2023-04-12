@@ -155,7 +155,7 @@ addAltText = () => {
 
   images.forEach(image => {
     const altText = image.alt;
-    if (!altText) return;
+    if (!altText || image.classList.contains("no-alt")) return;
 
     const button = document.createElement("button");
     button.style.opacity = "0.9";
