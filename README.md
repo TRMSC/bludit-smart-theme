@@ -41,7 +41,8 @@ There are a lot of additional features when using the Smart theme in combination
 - **Related pages** at the end of pages
 - **Notice badge for static sites** within search and browse sections
 - **Differentiated display** of posts and static pages
-- Prepare urls within pages as [preview links ⬇](#preview-links)
+- **Code block badges** for showing their **language** and copy to **clipboard**
+- Prepare urls within pages as [**preview links** ⬇](#preview-links)
 
 ## Custom fields
 Smart theme supports the following [custom fields](https://docs.bludit.com/en/content/custom-fields).  
