@@ -400,6 +400,16 @@ input[type="search" i]::-webkit-search-cancel-button {
   transition-delay: 0s;
 }
 
+/* CODE */
+.code-badge-container {
+    display: flex;
+    column-gap: 5px;
+    justify-content: flex-end;
+    margin-bottom: -0.25em;
+}
+.code-badge-container i {
+    cursor: pointer;
+}
 
 /* SMART PLUGIN  */
 .switch-menu {
