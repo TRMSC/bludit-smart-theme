@@ -87,6 +87,7 @@ setBodyPadding = async () => {
  * @async
  * @function sharePage
  * @throws {error} When the share api isn't available or the share fails
+ * @returns {void}
  * 
  */
 sharePage = async () => {
@@ -102,22 +103,38 @@ sharePage = async () => {
 
   } else {
 
-    // Copy to clipboard
-    const tempElement = document.createElement("input");
-    tempElement.value = shareData.url;
-    document.body.appendChild(tempElement);
-    tempElement.select();
-    document.execCommand("copy");
-    document.body.removeChild(tempElement);   
+    copyToClipboard(shareData.url);
 
-    // Show info
-    const popup = document.getElementById("clipboard-info");
-    popup.classList.add("show");
-    setTimeout(function() {
-      popup.classList.remove("show");
-    }, 1800);
   }
   
+};
+
+
+
+/**
+ * Copy content to clipboard
+ * 
+ * @function copyToClipboard
+ * @returns {void}
+ * 
+ */
+copyToClipboard = (content) => {
+
+      // Copy to clipboard
+      const tempElement = document.createElement("input");
+      tempElement.value = content;
+      document.body.appendChild(tempElement);
+      tempElement.select();
+      document.execCommand("copy");
+      document.body.removeChild(tempElement);   
+  
+      // Show info
+      const popup = document.getElementById("clipboard-info");
+      popup.classList.add("show");
+      setTimeout(function() {
+        popup.classList.remove("show");
+      }, 1800);
+
 };
 
 
