@@ -122,7 +122,7 @@ sharePage = async () => {
 copyToClipboard = (content) => {
 
       // Copy to clipboard
-      const tempElement = document.createElement("input");
+      const tempElement = document.createElement("textarea");
       tempElement.value = content;
       document.body.appendChild(tempElement);
       tempElement.select();
