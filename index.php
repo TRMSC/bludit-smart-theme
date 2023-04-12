@@ -90,7 +90,7 @@
 		<!-- Back to top button -->
 		<button id="back-to-top" class="btn btn-dark"><i class="fa fa-chevron-up"></i></button>
 
-		<div id="clipboard-info" class="bg-dark"><?php $language->p('clipboard-info') ?> <i class="fa fa-check"></i></div>
+		<div id="clipboard-info" class="bg-dark text-center"><?php $language->p('clipboard-info') ?> <i class="fa fa-check"></i></div>
 
 	</span>
 
