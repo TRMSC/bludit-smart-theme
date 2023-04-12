@@ -28,6 +28,7 @@ window.onload = () => {
     addAltText();
     createToc();
     addSmartPreview();
+    addCodeBadges();
 
     // Call the Smart Plugin's runSmartPlugin function if it is installed
     if (typeof runSmartPlugin === 'function') {
@@ -319,6 +320,49 @@ addSmartPreview = () => {
         // Replace the link-preview element with the link preview
         linkPreview.replaceWith(linkPreviewElem);
       });
+  });
+
+};
+
+
+
+/**
+ * Add a container with code badges to pre elements for showing their language and giving the possibility to copy content
+ *
+ * @function addCodeBadges
+ * @returns {void}
+ * 
+ */
+addCodeBadges = () => {
+
+  const preElements = document.querySelectorAll('pre');
+
+  preElements.forEach(function(pre) {
+
+    // Create container
+    const div = document.createElement('div');
+    div.classList.add('text-right', 'small', 'code-badge-container');
+    pre.insertAdjacentElement('beforebegin', div);
+
+    // Create language badge
+    const lang = pre.classList[0].replace('language-', '');
+    const langSpan = document.createElement('span');
+    langSpan.textContent = lang;
+
+    // Create clipboard button
+    const copyBtn = document.createElement('span');
+    const copyIcon = document.createElement('i');
+    copyBtn.appendChild(copyIcon);
+    copyIcon.classList.add('fa', 'fa-clipboard');
+    copyBtn.classList.add('cursor-pointer');
+    copyBtn.addEventListener('click', function() {
+      copyToClipboard(pre.textContent);
+    });
+
+    // Add badges to container
+    div.appendChild(langSpan);
+    div.appendChild(copyBtn);
+
   });
 
 };
