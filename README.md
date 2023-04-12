@@ -78,6 +78,10 @@ This feature is also documented within the smart plugins settings 🧩.
 
 Use the class `share` for html elements to open the share dialog when it is clicked.  
 
+### Impede alt tag buttons
+
+Smart series creates alt tag buttons for images by default. Exclude images from implementing such a button by adding the class `no-alt` to that img elements. Screen readers can still capture the alt tag from within code.
+
 ## License notes
 
 This repository is based on the [MIT licensed](https://github.com/bludit/bludit/blob/main/LICENSE) theme ["Alternative"](https://github.com/bludit/bludit/tree/main/bl-themes/alternative) of the [Bludit package](https://github.com/bludit/bludit) (Copyright (c) 2015-2021 Diego Najar).
