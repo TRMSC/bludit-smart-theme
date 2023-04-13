@@ -1,10 +1,12 @@
 {
 	"theme-data":
 	{
-		"name": "Alternative",
-		"description": "Simple and elegant theme for websites or blogs. Navbar with social media and static pages."
+		"name": "Smart",
+		"description": "Smart Theme is a modern, elegant, responsive and functional theme for Bludit. In combination with the Smart Plugin, the theme offers a wealth of functions and setting options, including individual CSS, dark and light mode, share buttons, table of contents, animations, open graph meta tags and much more."
 	},
 	"content": "Content",
+	"results": "Results",
 	"share": "Share",
-	"static-info": "Basic site"
+	"clipboard-info": "Copied to the clipboard",
+	"static-info": "Basic page"
 }
