@@ -17,8 +17,10 @@ pre, code {
 	color: #333;
 }
 pre {
-	border-left: 2px solid #ccc;
 	padding: 10px;
+    border-style: solid;
+    border-width: 1px 1px 1px 2px;
+    border-color: #dfdfdf #dfdfdf #dfdfdf #ccc;
 }
 code {
 	display: inline-block;
